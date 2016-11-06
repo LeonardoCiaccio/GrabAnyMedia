@@ -1,0 +1,39 @@
+/*.GAMblurring>:not(.GAMdimmer) {
+	
+     -webkit-filter: blur(5px) grayscale(.7)!important;
+     filter: blur(5px) grayscale(.7)!important;
+     -webkit-transition: .8s filter ease!important;
+     transition: .8s filter ease!important;
+ 
+}*/
+
+.GAMblurring{
+	
+     overflow: hidden!important;
+ 
+}
+
+.GAMblurring.GAMminus{
+	
+	padding-top: 100px!important;
+    overflow: auto!important;
+	
+}
+
+.GAMdimmer{
+	
+	position:fixed!important;
+	top:0px!important;
+	left:0px!important;
+	width:100%!important;
+	height:100%!important;
+	z-index:999999999999999999!important;
+	background-color: transparent!important;
+	
+}
+
+.GAMdimmer.GAMminus{
+	
+	height: 100px!important;
+	
+}

@@ -1,0 +1,157 @@
+/*
+
+	--> ( it )
+
+		Operazioni da svolgere per la gestione del background
+	
+	--> ( en )
+	
+		Fork and translate, please ...
+		
+	--> ...
+	
+*/
+
+
+
+( function( $ ){
+    
+	"use strict";
+	
+	if( !$ || !$.gam )throw new Error( chrome.i18n.getMessage( "e2" ).replace( "%s", "background.js" ) );
+	
+// ( it ) --> 
+	
+	chrome.runtime.onInstalled.addListener( function( details ){
+					
+		_gaq.push( [ "_trackEvent", "Extension", details.reason, chrome.runtime.getManifest().version ] );
+		
+	} );
+	
+	chrome.browserAction.onClicked.addListener( function( tab ){
+		
+	// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
+				
+		chrome.tabs.executeScript( tab.id, { 
+
+			allFrames 	: false,
+			file 		: "js/no.inspector.js"
+
+		} );
+
+	// ( it ) --> Vediamo se ci sono moduli
+		
+		var config = $.gam.config();	
+		
+	// ( it ) --> Dico all'inspector di aprire la finestra dei downloads
+
+		chrome.tabs.sendMessage( tab.id, {
+
+			config	: config,
+			cmd 	: "openConsole"					
+
+		} );
+			
+	// ( it ) --> Dico all'inspector eseguire il modulo
+				
+		try{
+			
+			var domain = tab.url.split( "/" )[2].split( "." );
+
+			domain = ( domain.length == 2 )
+					 ? domain[ 0 ]
+					 : domain[ domain.length - 2 ]
+					 ;
+			
+		// ( it ) --> vediamo se abbiamo il modulo giusto
+
+			if( config.modules[ domain ] && config.modules[ domain ].enabled ){
+
+			// ( it ) --> Prima il loader e poi il resto
+
+				chrome.tabs.sendMessage( tab.id, {
+
+					injection : config.loader + config.allsessions + config.modules[ domain ].code,
+					cmd 	  : "injectcode"					
+
+				} );
+
+			}else{
+
+				chrome.tabs.sendMessage( tab.id, {
+
+					injection : config.loader + config.allsessions,
+					cmd 	  : "injectcode"					
+
+				} );
+
+			}
+			
+		}catch( e ){}
+		
+		_gaq.push( [ "_trackEvent", "Domain Most Used", "run", "icon bar" ] );
+		
+	} );
+	
+	chrome.webNavigation.onCompleted.addListener( function( details ){
+		
+	// ( it ) --> Non mi interessano le sub frame
+               
+		if( details.frameId != 0 )return false;
+		
+	// ( it ) --> Vediamo se ci sono moduli
+		
+		var config = $.gam.config();
+			
+	// ( it ) --> Dico all'inspector eseguire il modulo
+				
+		try{
+			
+			var domain = details.url.split( "/" )[2].split( "." ),
+				exten  = domain[ domain.length - 1 ];
+
+			domain = ( domain.length == 2 )
+					 ? domain[ 0 ]
+					 : domain[ domain.length - 2 ]
+					 ;
+		
+			if( config.buttons[ domain ] && config.buttons[ domain ].enabled ){
+
+			// ( it ) --> Prima il loader e poi il resto
+
+				chrome.tabs.sendMessage( details.tabId, {
+
+					injection : config.buttonbuilder + config.buttons[ domain ].code,
+					cmd 	  : "injectcode"					
+
+				} );
+
+			}
+			
+		// ( it ) --> opendb attivo ?
+
+			var ODdomain = domain + "." + exten;
+
+			if( config.opendb.domains[ ODdomain ] && config.opendb.enabled ){
+
+				var codeinjection = config.opendb.proto
+									.replace( "%d", ODdomain )
+									.replace( "%t", config.opendb.domains[ ODdomain ].test )
+									.replace( "%f", config.opendb.domains[ ODdomain ].filter );
+				
+				chrome.tabs.executeScript( details.tabId, {
+
+					code : codeinjection				
+
+				} );
+
+			}
+			
+		}catch( e ){}
+
+	} );
+			
+	_gaq.push( [ "_trackEvent", "Extension", "new session", chrome.runtime.getManifest().version ] );
+	
+} )( window.jQuery );
+
