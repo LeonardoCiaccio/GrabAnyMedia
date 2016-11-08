@@ -68,7 +68,7 @@
 		],
 		objflag 	: "gamselected",
 		maxstorage 	: 1100,
-		minfilesize : "1.5 MB",
+		minfilesize : "0 byte",
 		filters		: {
 						
 			version			: "1.0.0.9",
@@ -374,6 +374,16 @@
 				enabled : true,
 				file	: "modules/vimeo.js",
 				code	: "!function(o){if(!o)return!1;var t=new RegExp('vimeo.com/[0-9]{1,20}$','g');if(console.info('[ GAM ] : Looking for data'),!document.location.href.match(t))return!1;console.info('[ GAM ] : Request data');try{var e=document.location.href+'?action=load_download_config';window.___ClipActions.fetchColdSourceFile(e),console.info('[ GAM ] : Pinged')}catch(n){}}(window.gammodule);"
+				
+			}
+			
+			,
+					
+			"younow" : {
+				
+				enabled : true,
+				file	: "modules/younow.js",
+				code	: "!function(t){var e=function(){try{return new XMLHttpRequest}catch(t){}try{return new ActiveXObject('Msxml3.XMLHTTP')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP.6.0')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP.3.0')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(t){}try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(t){}return null};if(console.log('[ GAM ] Loading younow module'),!t)return!1;var o=new RegExp('^(?:http?s?://www.younow.com/)[0-9A-Za-z-_]+(?=/|s|$)','g'),n=new RegExp('^http?s?://www.younow.com/','g'),r=location.href.match(o),c='https://api.younow.com/php/api/broadcast/info/curId=0/user=',a='https://cdn.younow.com/php/api/broadcast/videoPath/hls=1/broadcastId=';if(!r)return console.log('[ GAM ] Bad link for younow user'),!1;var s=r[0].replace(n,'').trim();if(console.info('[ GAM ] : Looking for data'),!s||''==s)return!1;console.info('[ GAM ] : Request data');try{var u=e();console.info('[ GAM ] : Request user info !'),u.open('GET',c+s,!0),u.onload=function(e){try{var o=JSON.parse(e.target.responseText);t([a+o.broadcastId],!1),console.info('[ GAM ] : Pinged')}catch(n){console.error('[ GAM ] : '+n.message)}},u.send(null)}catch(i){}}(window.gammodule);"
 				
 			}
 			
