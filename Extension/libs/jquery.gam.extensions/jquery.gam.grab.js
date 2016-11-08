@@ -147,7 +147,7 @@
 					
 				} ); // <-- setTimeout
 
-            },{'urls': ['http://*/*', 'https://*/*', '*://*/*', '<all_urls>', '\u003Call_urls\u003E'],
+            },{'urls': ['<all_urls>'],
                 types: ['main_frame', 'sub_frame', 'script', 'object', 'xmlhttprequest', 'other']},['responseHeaders']);
 				
 		// ( it ) --> Utilizzo un indirizzo fasullo che poi bloccherò per il passaggio dei moduli
