@@ -90,6 +90,9 @@
 	"m20" : {
         "message": "Download this video"
     },
+	"m21" : {
+        "message": "You can comment all page online on all site, enjoy !"
+    },
 	"n" : {
         "message": "Downloads"
     },
@@ -155,6 +158,12 @@
     },
 	"t21" : {
         "message": "OpenDB collects anonymous information about some sites, such as 'openload', which do not index their db, so it is very difficult to find on the internet any films attached to them. With OpenDB are made available to this information, the operation is simple, a user visits one of these host and if the conditions are right sends this information in a completely anonymous for the benefit of the whole community. Your contribution makes this most powerful tool, thank you!"
+    },
+	"t22" : {
+        "message": "Comments"
+    },
+	"t23" : {
+        "message": "Comment for this page"
     },
 	"cod1" : {
         "message": "for 'Apple Itunes'"

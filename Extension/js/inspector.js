@@ -139,9 +139,9 @@
 				dimm	= config.signature.domdimm,
 				url		= config.pages.console;
 			
-		// ( it ) --> Apro la console
+		// ( it ) --> Apro la console con il riferimento della pagina per i commenti
 			
-			applyconsole( id, blur, dimm, url );
+			applyconsole( id, blur, dimm, url + "?" + btoa( encodeURIComponent( location.href ) ) );
 			
 			chrome.runtime.sendMessage( {
 

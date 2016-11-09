@@ -819,6 +819,8 @@
 							
 						}
 						
+						$( ".disqus iframe" ).attr( "src", options.serverpages.comments + location.search );
+						
 					} );					
 
 				}catch( e ){
@@ -854,10 +856,12 @@
 		$( ".menu [data-tab='options']" ).text( chrome.i18n.getMessage( "t3" ) );
 		$( ".menu [data-tab='faq']" ).text( chrome.i18n.getMessage( "t4" ) );
 		$( ".menu [data-tab='info']" ).text( chrome.i18n.getMessage( "t5" ) );
+		$( ".menu [data-tab='comments']" ).text( chrome.i18n.getMessage( "t22" ) );
 		
 		$( ".menu [data-tab='optsize']" ).text( chrome.i18n.getMessage( "t15" ) );
 		$( ".menu [data-tab='optbuffer']" ).text( chrome.i18n.getMessage( "t16" ) );
 		
+		$( ".mycomments .header" ).text( chrome.i18n.getMessage( "t23" ));
 		$( ".copyitem" ).text( chrome.i18n.getMessage( "t6" ) );
 		$( ".newpage" ).text( chrome.i18n.getMessage( "t7" ) );
 		$( ".downloaditem" ).text( chrome.i18n.getMessage( "t8" ) );
@@ -1203,6 +1207,14 @@
 			
 		} );
 		
+		$( ".menu [data-tab='comments']" ).popup( {
+						
+				position    : "top center",
+				content  	: chrome.i18n.getMessage( "m21" ),
+				hoverable   : true
+
+		} );
+		
 		$( "h1.countmedia" ).popup( {
 					
 				hoverable : true,
@@ -1405,6 +1417,7 @@
 			
 			$( ".menu [data-tab='media']" ).hide();
 			$( ".menu [data-tab='scan']" ).hide();
+			$( ".menu [data-tab='comments']" ).hide();
 			$( ".menu [data-tab='options']" ).trigger( "click" );
 			
 			//return false;

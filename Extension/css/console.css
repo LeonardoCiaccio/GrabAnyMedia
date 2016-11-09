@@ -336,3 +336,34 @@ input{
     color: white!important;
 
 }
+
+.mycomments .row.disqus{
+	
+	height: 100%!important;
+	overflow: hidden!important;
+	
+}
+
+.mycomments .row.disqus iframe{
+	
+	height: 100%!important;
+	width: 100%!important;
+	border: none!important;
+	overflow: hidden!important;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

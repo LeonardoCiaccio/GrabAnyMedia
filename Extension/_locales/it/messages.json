@@ -90,6 +90,9 @@
 	"m20" : {
         "message": "Scarica questo video"
     },
+	"m21" : {
+        "message": "Puoi commentare tutte le pagine online su qualsiasi sito !"
+    },
 	"n" : {
         "message": "Downloads"
     },
@@ -155,6 +158,12 @@
     },
 	"t21" : {
         "message": "OpenDB raccoglie informazioni anonime inerenti alcuni siti, come ad esempio 'openload', che non indicizzano i propri db, pertanto è molto difficile trovare su internet eventuali films ad essi collegati. Con OpenDB vengono messe a disposizione queste informazioni, il funzionamento è semplice, un utente visita uno di questi host e se ci sono le condizioni invia queste informazioni in forma del tutto anonime a vantaggio di tutta la comunità. Il tuo contributo rende questo strumento più potente, grazie!"
+    },
+	"t22" : {
+        "message": "Commenti"
+    },
+	"t23" : {
+        "message": "Commenta questa pagina"
     },
 	"cod1" : {
         "message": "per 'Apple Itunes'"

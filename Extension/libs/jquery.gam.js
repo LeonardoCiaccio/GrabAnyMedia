@@ -38,7 +38,8 @@
 
 			checkupdate   : "http://grabanymedia.altervista.org/extension/v6/check-update.php",
 			opendb		  : "http://grabanymedia.altervista.org/extension/opendb/",
-			search 		  : "http://grabanymedia.altervista.org/extension/opendb/search.php"
+			search 		  : "http://grabanymedia.altervista.org/extension/opendb/search.php",
+			comments 	  : "https://grabanymedia.ssl.altervista.org/extension/comments.php"
 
 		},
 		pages		: {
