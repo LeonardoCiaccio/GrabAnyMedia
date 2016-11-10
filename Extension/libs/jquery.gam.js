@@ -70,6 +70,7 @@
 		objflag 	: "gamselected",
 		maxstorage 	: 1100,
 		minfilesize : "0 byte",
+		mev			: "js/mev.js",		
 		filters		: {
 						
 			version			: "1.0.0.9",

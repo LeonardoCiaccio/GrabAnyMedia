@@ -123,6 +123,33 @@
 			}
 
 	} );
+	
+// ( it ) --> Visualizza la finestra del cinema
+	
+	var id3 = chrome.contextMenus.create( { 
+		
+			title		: chrome.i18n.getMessage( "g2" ),
+			contexts 	: [ "all" ],
+			parentId	: id0, 
+			onclick		: function( info, tab ){
+
+				var searching = info.selectionText || "",
+					config 	  = $.gam.config();
+				
+			// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
+				
+				chrome.tabs.executeScript( tab.id, { 
+
+					allFrames 	: false,
+					file 		: config.mev
+
+				} );
+
+				_gaq.push( [ "_trackEvent", "MEV Cinema", "run", searching ] );
+
+			}
+
+	} );
 		
 } )( window.jQuery );
 

@@ -185,6 +185,24 @@
     },
     "g1" : {
         "message": "OpenDB"
+    },
+    "g2" : {
+        "message": "MEV Cinema"
+    },
+    "mevtitle" : {
+        "message": "Titolo per questo video"
+    },
+    "mevnotsupported" : {
+        "message": "Questo browser non supporta MEV"
+    },
+    "mevmoresource" : {
+        "message": "Ho evidenziato possibili codici da incorporare, clicca sul bordo rosso per aggiungerlo"
+    },
+    "mevmorevideo" : {
+        "message": "Ho evidenziato possibili embed da aggiungere, clicca sul bordo rosso per aggiungerlo"
+    },
+    "mevconfirm" : {
+        "message": "Non ho trovato nulla qui vuoi aprire MEV app ?"
     }
       
 }  
