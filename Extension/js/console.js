@@ -76,7 +76,7 @@
 
 			var xhr = getXHR();
 
-			console.info( "[ GAM ] : Ping start ( " + url + " )" );
+			//console.info( "[ GAM ] : Ping start ( " + url + " )" );
 
 			xhr.open( "GET", url, true );
 			xhr.send( null );
@@ -85,7 +85,7 @@
 
 				xhr.abort();
 
-				console.info( "[ GAM ] : Ping end ( " + url + " )" );
+				//console.info( "[ GAM ] : Ping end ( " + url + " )" );
 
 			}, pingout );
 
@@ -108,7 +108,7 @@
 				
 				var xhr = getXHR();
 
-				console.info( "[ GAM ] : Crawl start ( " + mystore.url + " )" );
+				//console.info( "[ GAM ] : Crawl start ( " + mystore.url + " )" );
 				
 				xhr.open( "GET", mystore.url, true );
 
@@ -125,7 +125,7 @@
 
 					}
 
-					console.info( "[ GAM ] : Crawl end ( " + mystore.url + " )" );
+					//console.info( "[ GAM ] : Crawl end ( " + mystore.url + " )" );
 
 				};
 
@@ -505,7 +505,7 @@
 
 			}catch( e ){
 
-				console.log( "smist : " + e.message );
+				//console.log( "smist : " + e.message );
 
 			}
 			
@@ -719,7 +719,7 @@
 		
 			test : function( request, sender, sendResponse ){
 
-				console.log( "bat : " + request );
+				//console.log( "bat : " + request );
 
 			}
 
@@ -743,7 +743,7 @@
 
 				}catch( e ){
 
-					console.log( "onStorage : " + e.message );
+					//console.log( "onStorage : " + e.message );
 
 				}
 				
@@ -772,7 +772,7 @@
 
 					}catch( e ){
 
-						console.log( "onDB : " + e.message );
+						//console.log( "onDB : " + e.message );
 
 					}
 
@@ -825,7 +825,7 @@
 
 				}catch( e ){
 
-					console.log( "onSettings : " + e.message );
+					//console.log( "onSettings : " + e.message );
 
 				}
 				
@@ -1191,7 +1191,7 @@
 
 				}catch( e ){
 
-					console.log( "Scan : " + e.message );
+					//console.log( "Scan : " + e.message );
 					
 					//setTimeout( hidesplash, 2000 );
 

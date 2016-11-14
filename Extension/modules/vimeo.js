@@ -20,11 +20,11 @@
 	
 	var reSearch = new RegExp("vimeo\.com\/[0-9]{1,20}$", "g" );
 		
-	console.info( "[ GAM ] : Looking for data" );
+	//console.info( "[ GAM ] : Looking for data" );
 	
 	if( !document.location.href.match( reSearch ) )return false;
 	
-	console.info( "[ GAM ] : Request data" );
+	//console.info( "[ GAM ] : Request data" );
 	
 	try{
 		
@@ -33,7 +33,7 @@
 		var myRequest = document.location.href + "?action=load_download_config";
 		window.___ClipActions.fetchColdSourceFile( myRequest );
 		
-		console.info( "[ GAM ] : Pinged" );
+		//console.info( "[ GAM ] : Pinged" );
 		
 	}catch( e ){}
 		

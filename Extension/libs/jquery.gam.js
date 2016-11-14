@@ -336,16 +336,16 @@
 			isolated : "(image\\/)(?!.*vnd)|(css|style)"
 			
 		}, // filters
-		loader 		: "!function(){var e='gammodule',t='//localhost/?',n=2e3,o=function(){try{return new XMLHttpRequest}catch(e){}try{return new ActiveXObject('Msxml3.XMLHTTP')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP.6.0')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP.3.0')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){}try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){}return null},r=function(e){var t=o();console.info('[ GAM ] : Ping start ( '+e+' )'),t.open('GET',e,!0),t.send(null),setTimeout(function(){t.abort(),console.info('[ GAM ] : Ping end ( '+e+' )')},n)},c=function(e,n){if(!e||e.length<1)return!1;console.info('[ GAM ] : Links ( '+e.length+' )');for(var o=0;o<e.length;o++){try{var c=e[o];r(c)}catch(a){console.error(a.message)}if(n)try{var c=e[o];r(t+encodeURIComponent(c))}catch(a){console.error(a.message)}}};window[e]=c}();",
-		allsessions	: "!function(e){if(!e)return!1;console.info('[ GAM ] : Looking for Media tags');for(var o=[],t=function(e){return e=e.replace(/(\\\\)/g,''),e.match(/(http?s?:?\\\\?\\/?\\\\?\\/[^\\s,\\\"\\'<>]+)/g)||[]},n=document.querySelectorAll('video, audio, embed, source, object, param')||[],r=0;r<n.length;r++)try{for(var c=n[r].attributes||[],a=0;a<c.length;a++)try{var i=t(decodeURIComponent(c[a].value.trim()));i&&(o=o.concat(i))}catch(l){}}catch(l){}console.info('[ GAM ] : All my elements catched ( '+o.length+' )'),e(o,!1)}(window.gammodule);",	
-		buttonbuilder : "!function(){window.gambuttonbuilder=function(t,e,A,r){if(!t||!e)return!1;var a=function(t,e,A){if(!t)return null;e=e||'" + chrome.i18n.getMessage( "m20" ) + "';var r=document.createElement('div'),a=document.createElement('img'),i=document.createElement('a');return i.setAttribute('href',t),A?i.setAttribute('target','_blank'):'#'!=t&&(i.setAttribute('download','GrabAnyMedia.mp4'),i.setAttribute('target','_blank')),i.setAttribute('style',['text-decoration:none!important','font-size:11px!important','font-family:monospace!important'].join(';')),i.innerText=e,a.setAttribute('draggable','false'),a.setAttribute('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAf9JREFUOI2Nj81LVGEUxn/vuTNz647TF7WJmGEsq0WLGomCssXQwlq0qrZhkQaCBNO/EUKS6WyidR+bFmlk9CEkmSkFfWA6ChmVSYTOjFfufd8WjtPM3Ck6q/c9z/P8zjmKmkr1TaaUMR1KmTRaEgBG9IxCHivRfaPteyYq/Wrt0dw/5xhT6BE4XwutLGNMNlxYd3kkEy+WAc39c47y84OIOvqvcBmieRYu2q0jmXhRVqmFnv8Jr62rhGNe1O0GUKm+yZTA2N9CG2wh3djAyaYYjZsjHL+V+wMUfSCkjOlAqaqQHVK0JKK07opxJO4QklX9ww+3+hRf2kNK6TRYpdt8rhzexKl923DCEthmYHKx6q8VacG3EgBe/hf5Ty/Zbq/UDRvg4dRSVU80ScEYlr/lyOfG8V2XizcGuXB9gBe5n1Xm11+KzOe9AFgWZ0a/ut9nV0cAxsDz9585d/Uuw1MLZeODmvVLNS14/kg9BaD73jAArmd4NL0U0I0yQyEj1jXgTD3A29l57r+aYsHaQn5FB3StrawCaOq6eRvfO10PIvZ6YrsPBadD79ilpk4BCHvRNq1kIuBS4OzYWwernzTYoQyAALzrPbtk61gLVuROpc3eGsdyNgYmR+3IiadtyeXSjOo6mP243/jSrhVp0SRL7WmjzJDWVna8c+ebSv9vmWG756vCwY8AAAAASUVORK5CYII='),a.setAttribute('style',['vertical-align:middle!important','margin-right: 5px!important'].join(';')),a.classList.add('img'),r.setAttribute('style','margin:15px!important'),r.appendChild(a),r.appendChild(i),r},i=a(t,A,r);return i?(e.firstChild?e.insertBefore(i,e.firstChild):e.appendChild(i),!0):!1}}();",
+		loader 		: "!function(){var e='gammodule',t='//localhost/?',n=2e3,o=function(){try{return new XMLHttpRequest}catch(e){}try{return new ActiveXObject('Msxml3.XMLHTTP')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP.6.0')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP.3.0')}catch(e){}try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(e){}try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(e){}return null},r=function(e){var t=o();t.open('GET',e,!0),t.send(null),setTimeout(function(){t.abort();},n)},c=function(e,n){if(!e||e.length<1)return!1;for(var o=0;o<e.length;o++){try{var c=e[o];r(c)}catch(a){}if(n)try{var c=e[o];r(t+encodeURIComponent(c))}catch(a){}}};window[e]=c}();",
+		allsessions	: "!function(e){if(!e)return!1;for(var o=[],t=function(e){return e=e.replace(/(\\\\)/g,''),e.match(/(http?s?:?\\\\?\\/?\\\\?\\/[^\\s,\\\"\\'<>]+)/g)||[]},n=document.querySelectorAll('video, audio, embed, source, object, param')||[],r=0;r<n.length;r++)try{for(var c=n[r].attributes||[],a=0;a<c.length;a++)try{var i=t(decodeURIComponent(c[a].value.trim()));i&&(o=o.concat(i))}catch(l){}}catch(l){}e(o,!1)}(window.gammodule);",	
+		buttonbuilder : "!function(){window.gambuttonbuilder=function(t,e,A,r){if(!t||!e)return!1;var a=function(t,e,A){if(!t)return null;e=e||'" + chrome.i18n.getMessage( "m20" ) + "';var r=document.createElement('div'),a=document.createElement('img'),i=document.createElement('a');return i.setAttribute('href',t),A?i.setAttribute('target','_blank'):'#'!=t&&(i.setAttribute('download','GrabAnyMedia.mp4'),i.setAttribute('target','_blank')),i.setAttribute('style',['text-decoration:none!important','font-size:11px!important','font-family:monospace!important'].join(';')),i.textContent=e,a.setAttribute('draggable','false'),a.setAttribute('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAf9JREFUOI2Nj81LVGEUxn/vuTNz647TF7WJmGEsq0WLGomCssXQwlq0qrZhkQaCBNO/EUKS6WyidR+bFmlk9CEkmSkFfWA6ChmVSYTOjFfufd8WjtPM3Ck6q/c9z/P8zjmKmkr1TaaUMR1KmTRaEgBG9IxCHivRfaPteyYq/Wrt0dw/5xhT6BE4XwutLGNMNlxYd3kkEy+WAc39c47y84OIOvqvcBmieRYu2q0jmXhRVqmFnv8Jr62rhGNe1O0GUKm+yZTA2N9CG2wh3djAyaYYjZsjHL+V+wMUfSCkjOlAqaqQHVK0JKK07opxJO4QklX9ww+3+hRf2kNK6TRYpdt8rhzexKl923DCEthmYHKx6q8VacG3EgBe/hf5Ty/Zbq/UDRvg4dRSVU80ScEYlr/lyOfG8V2XizcGuXB9gBe5n1Xm11+KzOe9AFgWZ0a/ut9nV0cAxsDz9585d/Uuw1MLZeODmvVLNS14/kg9BaD73jAArmd4NL0U0I0yQyEj1jXgTD3A29l57r+aYsHaQn5FB3StrawCaOq6eRvfO10PIvZ6YrsPBadD79ilpk4BCHvRNq1kIuBS4OzYWwernzTYoQyAALzrPbtk61gLVuROpc3eGsdyNgYmR+3IiadtyeXSjOo6mP243/jSrhVp0SRL7WmjzJDWVna8c+ebSv9vmWG756vCwY8AAAAASUVORK5CYII='),a.setAttribute('style',['vertical-align:middle!important','margin-right: 5px!important'].join(';')),a.classList.add('img'),r.setAttribute('style','margin:15px!important'),r.appendChild(a),r.appendChild(i),r},i=a(t,A,r);return i?(e.firstChild?e.insertBefore(i,e.firstChild):e.appendChild(i),!0):!1}}();",
 		modules		: {
 			
 			"youtube" : {
 				
 				enabled : true,
 				file	: "modules/youtube.js",
-				code	: "!function(o){if(!o)return!1;var e=function(){var o,e=window.ytplayer,t=[];if(console.info('[ GAM ] : Searching YT object ...'),!e)return console.info('[ GAM ] : YT object not found'),t;try{o=e.config.args.url_encoded_fmt_stream_map}catch(n){return console.info('[ GAM ] : YT object found but without params'),t}try{for(var r=o.split(','),c=0;c<r.length;c++){for(var i=r[c].split('&'),a='',l=0;l<i.length;l++){var f=i[l].split('='),s=decodeURIComponent(f[0].toUpperCase()),u=decodeURIComponent(f[1]);if('URL'==s){a=u;break}}a&&''!=a&&t.push(a)}return t}catch(n){return console.info('[ GAM ] : Problems with links'),t}};o(e(),!0)}(window.gammodule);"
+				code	: "!function(a){if(!a)return!1;var b=function(){var a,b=window.ytplayer,c=[];if(!b)return c;try{a=b.config.args.url_encoded_fmt_stream_map}catch(a){return c}try{for(var d=a.split(','),e=0;e<d.length;e++){for(var f=d[e].split('&'),g='',h=0;h<f.length;h++){var i=f[h].split('='),j=decodeURIComponent(i[0].toUpperCase()),k=decodeURIComponent(i[1]);if('URL'==j){g=k;break}}g&&''!=g&&c.push(g)}return c}catch(a){return c}};a(b(),!0)}(window.gammodule);"
 				
 			}
 			
@@ -355,7 +355,7 @@
 				
 				enabled : true,
 				file	: "modules/facebook.js",
-				code	: "!function(o){if(!o)return!1;var e=function(){var o=[];for(var e in window)if(e.match(/^(swf)/gi)){try{var t=JSON.parse(decodeURIComponent(window[e].variables.params));o.push(t.video_data.progressive.hd_src),console.info('[ GAM ] : '+e+' HD ( '+t.video_data.progressive.hd_src+' )')}catch(n){}try{var t=JSON.parse(decodeURIComponent(window[e].variables.params));o.push(t.video_data.progressive.sd_src),console.info('[ GAM ] : '+e+' SD ( '+t.video_data.progressive.sd_src+' )')}catch(n){}}return o};o(e(),!1)}(window.gammodule);"
+				code	: "!function(a){if(!a)return!1;var b=function(){var a=[];for(var b in window)if(b.match(/^(swf)/gi)){try{var c=JSON.parse(decodeURIComponent(window[b].variables.params));a.push(c.video_data.progressive.hd_src)}catch(a){}try{var c=JSON.parse(decodeURIComponent(window[b].variables.params));a.push(c.video_data.progressive.sd_src)}catch(a){}}return a};a(b(),!1)}(window.gammodule);"
 				
 			}
 			
@@ -365,7 +365,7 @@
 				
 				enabled : true,
 				file	: "modules/dailymotion.js",
-				code	: "!function(e){if(!e||!window.config)return!1;console.info('[ GAM ] : Module dailymotion loaded !');var t=function(){for(var e=[],t=[144,240,380,480,720,1080],n=0;n<t.length;n++)try{var o=window.config.metadata.qualities[t[n]][0].url;e.push(o),o=window.config.metadata.qualities[t[n]][1].url,e.push(o),console.info('[ GAM ] : Grab '+t[n]+' resoluction !')}catch(r){}return e};e(t(),!0)}(window.gammodule);"
+				code	: "!function(a){if(!a||!window.config)return!1;var b=function(){for(var a=[],b=[144,240,380,480,720,1080],c=0;c<b.length;c++)try{var d=window.config.metadata.qualities[b[c]][0].url;a.push(d),d=window.config.metadata.qualities[b[c]][1].url,a.push(d)}catch(a){}return a};a(b(),!0)}(window.gammodule);"
 				
 			}
 			
@@ -375,7 +375,7 @@
 				
 				enabled : true,
 				file	: "modules/vimeo.js",
-				code	: "!function(o){if(!o)return!1;var t=new RegExp('vimeo.com/[0-9]{1,20}$','g');if(console.info('[ GAM ] : Looking for data'),!document.location.href.match(t))return!1;console.info('[ GAM ] : Request data');try{var e=document.location.href+'?action=load_download_config';window.___ClipActions.fetchColdSourceFile(e),console.info('[ GAM ] : Pinged')}catch(n){}}(window.gammodule);"
+				code	: "!function(a){if(!a)return!1;var b=new RegExp('vimeo.com/[0-9]{1,20}$','g');if(!document.location.href.match(b))return!1;try{var c=document.location.href+'?action=load_download_config';window.___ClipActions.fetchColdSourceFile(c)}catch(a){}}(window.gammodule);"
 				
 			}
 			
@@ -385,7 +385,7 @@
 				
 				enabled : true,
 				file	: "modules/younow.js",
-				code	: "!function(t){var e=function(){try{return new XMLHttpRequest}catch(t){}try{return new ActiveXObject('Msxml3.XMLHTTP')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP.6.0')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP.3.0')}catch(t){}try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(t){}try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(t){}return null};if(console.log('[ GAM ] Loading younow module'),!t)return!1;var o=new RegExp('^(?:http?s?://www.younow.com/)[0-9A-Za-z-_]+(?=/|s|$)','g'),n=new RegExp('^http?s?://www.younow.com/','g'),r=location.href.match(o),c='https://api.younow.com/php/api/broadcast/info/curId=0/user=',a='https://cdn.younow.com/php/api/broadcast/videoPath/hls=1/broadcastId=';if(!r)return console.log('[ GAM ] Bad link for younow user'),!1;var s=r[0].replace(n,'').trim();if(console.info('[ GAM ] : Looking for data'),!s||''==s)return!1;console.info('[ GAM ] : Request data');try{var u=e();console.info('[ GAM ] : Request user info !'),u.open('GET',c+s,!0),u.onload=function(e){try{var o=JSON.parse(e.target.responseText);t([a+o.broadcastId],!1),console.info('[ GAM ] : Pinged')}catch(n){console.error('[ GAM ] : '+n.message)}},u.send(null)}catch(i){}}(window.gammodule);"
+				code	: "!function(a){var b=function(){try{return new XMLHttpRequest}catch(a){}try{return new ActiveXObject('Msxml3.XMLHTTP')}catch(a){}try{return new ActiveXObject('Msxml2.XMLHTTP.6.0')}catch(a){}try{return new ActiveXObject('Msxml2.XMLHTTP.3.0')}catch(a){}try{return new ActiveXObject('Msxml2.XMLHTTP')}catch(a){}try{return new ActiveXObject('Microsoft.XMLHTTP')}catch(a){}return null};if(!a)return!1;var c=new RegExp('^(?:http?s?://www.younow.com/)[0-9A-Za-z-_]+(?=/|s|$)','g'),d=new RegExp('^http?s?://www.younow.com/','g'),e=location.href.match(c),f='https://api.younow.com/php/api/broadcast/info/curId=0/user=',g='https://cdn.younow.com/php/api/broadcast/videoPath/hls=1/broadcastId=';if(!e)return!1;var h=e[0].replace(d,'').trim();if(!h||''==h)return!1;try{var i=b();i.open('GET',f+h,!0),i.onload=function(b){try{var c=JSON.parse(b.target.responseText);a([g+c.broadcastId],!1)}catch(a){}},i.send(null)}catch(a){}}(window.gammodule);"
 				
 			}
 			
@@ -395,7 +395,7 @@
 			"facebook" : {
 				
 				enabled : true,
-				code 	: "!function(){var t='gambutton',e='.mtm',o='.uiLayer';console.log('[ GAM ] Running module buttons ...');var n=function(){if(!window.gambuttonbuilder)return!1;console.log('[ GAM ] Search buttons ...');var n=document.querySelectorAll(\"[data-swfid^='swf_id_']:not(.\"+t+')')||[];console.log('[ GAM ] New buttons ('+n.length+')');for(var a=0;a<n.length;a++)try{var r=n[a].getAttribute('data-swfid'),i=JSON.parse(decodeURIComponent(window[r].variables.params)),s='';try{s=i.video_data.progressive.hd_src}catch(l){}try{s&&''!=s||(s=i.video_data.progressive.sd_src)}catch(l){}if(!s||''==s)continue;var c=n[a].closest(e)||n[a].closest(o).querySelector('#fbPhotoChannelChannelFeedback');window.gambuttonbuilder(s,c)?(n[a].classList.add(t),console.log('[ GAM ] Installed ('+s+')')):console.log('[ GAM ] Problems with ('+s+')')}catch(l){}};console.log('[ GAM ] SetUp to observe ...');var a=document.body;if(!a)return!1;var r=new MutationObserver(function(t){t.forEach(function(){n()})}),i={attributes:!0,childList:!0,characterData:!0};r.observe(a,i),console.log('[ GAM ] Observe all change !'),n()}();"
+				code 	: "!function(){var t='gambutton',e='.mtm',a='.uiLayer',r=function(){if(!window.gambuttonbuilder)return!1;for(var r=document.querySelectorAll(\"[data-swfid^='swf_id_']:not(.\"+t+')')||[],o=0;o<r.length;o++)try{var n=r[o].getAttribute('data-swfid'),i=JSON.parse(decodeURIComponent(window[n].variables.params)),c='';try{c=i.video_data.progressive.hd_src}catch(d){}try{c&&''!=c||(c=i.video_data.progressive.sd_src)}catch(d){}if(!c||''==c)continue;var s=r[o].closest(e)||r[o].closest(a).querySelector('#fbPhotoChannelChannelFeedback');window.gambuttonbuilder(c,s)&&r[o].classList.add(t)}catch(d){}},o=document.body;if(!o)return!1;var n=new MutationObserver(function(t){t.forEach(function(){r()})}),i={attributes:!0,childList:!0,characterData:!0};n.observe(o,i),r()}();"
 				
 			}
 			
@@ -404,7 +404,7 @@
 			"youtube" : {
 				
 				enabled : true,
-				code 	: "!function(){var t='gambutton',e='watch-header',n=function(){var t,e=window.ytplayer,n=[];if(console.info('[ GAM ] : Searching YT object ...'),!e)return console.info('[ GAM ] : YT object not found'),n;try{t=e.config.args.url_encoded_fmt_stream_map}catch(r){return console.info('[ GAM ] : YT object found but without params'),n}try{for(var a=t.split(','),o=0;o<a.length;o++){for(var i=a[o].split('&'),l={},u=0;u<i.length;u++){var s=i[u].split('='),c=decodeURIComponent(s[0].toUpperCase()),A=decodeURIComponent(s[1]);switch(c){case'TYPE':l.type=A;break;case'QUALITY':l.quality=A;break;case'URL':l.url=A}}l.type&&l.quality&&l.url&&n.push(l)}return n}catch(r){return n}};console.log('[ GAM ] Running module buttons ...');var r=function(){if(!window.gambuttonbuilder||document.querySelector('.'+t))return!1;console.log('[ GAM ] Search links ...');var r=n(),a=!0;console.log('[ GAM ] New links ('+r.length+')');for(var o=0;a&&o<r.length;o++)try{var i=document.getElementById(e);if(r[o].url.indexOf('signature')<0){window.gambuttonbuilder(document.location.href.replace('youtube','10youtube'),i,'" + chrome.i18n.getMessage( "m19" ) + "',1);break}console.log(window.gambuttonbuilder(r[o].url,i,r[o].quality+' / '+r[o].type)?'[ GAM ] Installed ('+r[o].url+')':'[ GAM ] Problems with ('+r[o].url+')')}catch(l){a=!1,console.log(l.message)}if(a){var i=document.getElementById(e);i&&!i.classList.contains(t)&&i.classList.add(t)}};console.log('[ GAM ] SetUp to observe ...');var a=document.body;if(!a)return!1;var o=new MutationObserver(function(t){t.forEach(function(){r()})}),i={attributes:!0,childList:!0,characterData:!0};o.observe(a,i),console.log('[ GAM ] Observe all change !'),r()}();"
+				code 	: "!function(){var t='gambutton',e='watch-header',r=function(){var t,e=window.ytplayer,r=[];if(!e)return r;try{t=e.config.args.url_encoded_fmt_stream_map}catch(a){return r}try{for(var n=t.split(','),o=0;o<n.length;o++){for(var i=n[o].split('&'),c={},u=0;u<i.length;u++){var d=i[u].split('='),s=decodeURIComponent(d[0].toUpperCase()),l=decodeURIComponent(d[1]);switch(s){case'TYPE':c.type=l;break;case'QUALITY':c.quality=l;break;case'URL':c.url=l}}c.type&&c.quality&&c.url&&r.push(c)}return r}catch(a){return r}},a=function(){if(!window.gambuttonbuilder||document.querySelector('.'+t))return!1;for(var a=r(),n=!0,o=0;n&&o<a.length;o++)try{var i=document.getElementById(e);if(a[o].url.indexOf('signature')<0){window.gambuttonbuilder(document.location.href.replace('youtube','10youtube'),i,'Can\\'t grab this video, use external service !',!0);break}window.gambuttonbuilder(a[o].url,i,a[o].quality+' / '+a[o].type)}catch(c){n=!1}if(n){var i=document.getElementById(e);i&&!i.classList.contains(t)&&i.classList.add(t)}},n=document.body;if(!n)return!1;var o=new MutationObserver(function(t){t.forEach(function(){a()})}),i={attributes:!0,childList:!0,characterData:!0};o.observe(n,i),a()}();"
 				
 			}
 			
@@ -412,7 +412,7 @@
 		opendb		: {
 			
 			enabled : true,
-			proto 	: "!function(){var e=\"%d\";if(test=new RegExp(\"%t\",\"g\"),filter=new RegExp(\"%f\",\"g\"),match=location.href.match(test),console.log(\"[ GAM ] Opendb loaded for '\"+e+\"'\"),console.log(\"[ GAM ] Testing '\"+test+\"'\"),!match)return console.log(\"[ GAM ] Bad link for '\"+e+\"'\"),!1;var o=match[0].replace(filter,\"\").trim();console.log(\"[ GAM ] Video code '\"+o+\"'\"),chrome.runtime.sendMessage({exe:\"opendb\",opendb:{domain:e,code:o}}),console.log(\"[ GAM ] Opendb pinged for '\"+e+\"' , thanks !\")}();",
+			proto 	: "!function(){var e=\"%d\";if(test=new RegExp(\"%t\",\"g\"),filter=new RegExp(\"%f\",\"g\"),match=location.href.match(test),!match)return !1;var o=match[0].replace(filter,\"\").trim();chrome.runtime.sendMessage({exe:\"opendb\",opendb:{domain:e,code:o}})}();",
 			domains	: {
 				
 				"openload.co" : {
@@ -489,7 +489,7 @@
 
 				}catch( e ){
 
-					console.error( "Set new options : " + e.message );
+					//console.error( "Set new options : " + e.message );
 
 				}
 				
@@ -529,7 +529,7 @@
 					
 				}catch( e ){
 					
-					console.log( e.message );
+					//console.log( e.message );
 					
 				}
 				

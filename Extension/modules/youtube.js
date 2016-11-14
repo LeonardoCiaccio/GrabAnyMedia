@@ -24,11 +24,11 @@
 			YO = [],
 			YD;
 
-		console.info( "[ GAM ] : Searching YT object ..." );
+		//console.info( "[ GAM ] : Searching YT object ..." );
 		
 		if( !Y ){
 			
-			console.info( "[ GAM ] : YT object not found" );
+			//console.info( "[ GAM ] : YT object not found" );
 			
 			return YO;
 		
@@ -42,7 +42,7 @@
 
 		}catch( e ){
 			
-			console.info( "[ GAM ] : YT object found but without params" );
+			//console.info( "[ GAM ] : YT object found but without params" );
 			
 			return YO;
 		
@@ -82,7 +82,7 @@
 
 		}catch( e ){
 
-			console.info( "[ GAM ] : Problems with links" );
+			//console.info( "[ GAM ] : Problems with links" );
 			
 			return YO;
 

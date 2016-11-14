@@ -21,6 +21,8 @@
 // ( it ) --> Necessaria la sua presenza
 	
 	if( !$ || !$.gam )throw new Error( chrome.i18n.getMessage( "e2" ).replace( "%s", "$.gam.comm" ) );
+	
+	window.myGA = window.myGA || function(){};
 			
 	var checkupdate = function(){
 		
@@ -85,13 +87,13 @@
 			} ).fail( function(){
 
 				// TODO
-				console.log( "Problems with check updates" );
+				//console.log( "Problems with check updates" );
 
 			} );
 
 		}catch( e ){
 
-			console.error( "Check Updates : " + e.message );
+			//console.error( "Check Updates : " + e.message );
 
 		}
 		
@@ -128,29 +130,29 @@
 		
 		opendb : function( request, sender, sendResponse ){
 			
-			console.log( "Prepare ping ..." );
+			//console.log( "Prepare ping ..." );
 			
 			var config  = $.gam.config(),
 				b64data = btoa( JSON.stringify( request.opendb ) );
 			
-			console.log( "Sending ping ..." );
+			//console.log( "Sending ping ..." );
 			
 			$.getJSON( config.serverpages.opendb + "?" + encodeURIComponent( b64data ), function( data ) {
 
 				if( data ){
 
-					console.log( "OpenDB pinged !" );
-					if( data.data === 1 )_gaq.push( [ "_trackEvent", "OpenDB", "ping", "add" ] );
+					//console.log( "OpenDB pinged !" );
+					if( data.data === 1 )window.myGA( "OpenDB", "ping", "add" );
 
 				}else{
 
-					console.log( "OpenDB , pinged but have problems !" );
+					//console.log( "OpenDB , pinged but have problems !" );
 
 				}
 
 			} ).fail( function(){
 
-				console.log( "OpenDB ping failed !" );
+				//console.log( "OpenDB ping failed !" );
 
 			} );
 			
@@ -162,7 +164,7 @@
 			
 			var mygag = request.gag;
 			
-			_gaq.push( [ "_trackEvent", mygag.a, mygag.b, mygag.c ] );
+			window.myGA( mygag.a, mygag.b, mygag.c );
 			
 		}
 		

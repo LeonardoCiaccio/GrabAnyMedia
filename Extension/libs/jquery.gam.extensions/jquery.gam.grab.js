@@ -192,7 +192,7 @@
 					
 				}catch( e ){
 					
-					console.error( "[ GAM ] onBeforeRequest : " + e.message );
+					//console.error( "[ GAM ] onBeforeRequest : " + e.message );
 					
 				}
 								

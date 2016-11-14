@@ -20,17 +20,17 @@
 		closest   = ".mtm",
 		closest2  = ".uiLayer";
 	
-	console.log( "[ GAM ] Running module buttons ..." );
+	//console.log( "[ GAM ] Running module buttons ..." );
 	
 	var installbuttons = function(){
 		
 		if( !window.gambuttonbuilder )return false;
 		
-		console.log( "[ GAM ] Search buttons ..." );
+		//console.log( "[ GAM ] Search buttons ..." );
 		
 		var all = document.querySelectorAll( "[data-swfid^='swf_id_']:not(." + signature + ")" ) || [];
 		
-		console.log( "[ GAM ] New buttons (" + all.length + ")" );
+		//console.log( "[ GAM ] New buttons (" + all.length + ")" );
 		
 		for( var i = 0; i < all.length; i++ ){
 			
@@ -64,11 +64,11 @@
 				if( window.gambuttonbuilder( download, mytarget ) ){
 					
 					all[ i ].classList.add( signature );
-					console.log( "[ GAM ] Installed (" + download + ")" );
+					//console.log( "[ GAM ] Installed (" + download + ")" );
 					
 				}else{
 					
-					console.log( "[ GAM ] Problems with (" + download + ")" );
+					//console.log( "[ GAM ] Problems with (" + download + ")" );
 					
 				}
 								
@@ -78,7 +78,7 @@
 		
 	}; // installbuttons
 	
-	console.log( "[ GAM ] SetUp to observe ..." );
+	//console.log( "[ GAM ] SetUp to observe ..." );
 
 	var toobserv = document.body;
 
@@ -98,7 +98,7 @@
 
 	observer.observe( toobserv, config );
 
-	console.log( "[ GAM ] Observe all change !" );
+	//console.log( "[ GAM ] Observe all change !" );
 	
 	installbuttons();
 	

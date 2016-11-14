@@ -18,7 +18,7 @@
 
 	if( !loader || !window.config )return false;
 	
-	console.info( "[ GAM ] : Module dailymotion loaded !" );
+	//console.info( "[ GAM ] : Module dailymotion loaded !" );
 	
 	var links = function(){
 		
@@ -44,7 +44,7 @@
 				tmp = window.config.metadata.qualities[ qualities[ i ] ][ 1 ].url;			
 				response.push( tmp );
 
-				console.info( "[ GAM ] : Grab " + qualities[ i ] + " resoluction !" );
+				//console.info( "[ GAM ] : Grab " + qualities[ i ] + " resoluction !" );
 
 			}catch( e ){}
 			

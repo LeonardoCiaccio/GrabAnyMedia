@@ -22,7 +22,7 @@
 		
 		$.gam( {
 
-			debug 		: true,
+			debug 		: false,
 			signature 	: {
 			
 				storage : "gam storage don't remove this"

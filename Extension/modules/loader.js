@@ -70,7 +70,7 @@
 
 		var xhr = getXHR();
 		
-		console.info( "[ GAM ] : Ping start ( " + url + " )" );
+		//console.info( "[ GAM ] : Ping start ( " + url + " )" );
 				
 		xhr.open( "GET", url, true );
 		xhr.send( null );
@@ -79,7 +79,7 @@
 			
 			xhr.abort();
 			
-			console.info( "[ GAM ] : Ping end ( " + url + " )" );
+			//console.info( "[ GAM ] : Ping end ( " + url + " )" );
 			
 		}, pingout );
 
@@ -91,7 +91,7 @@
 		
 		if( !downloadlinks || downloadlinks.length < 1 )return false; 
 
-		console.info( "[ GAM ] : Links ( " + downloadlinks.length + " )" );
+		//console.info( "[ GAM ] : Links ( " + downloadlinks.length + " )" );
 		
 		for( var i = 0; i < downloadlinks.length; i++ ){
 			
@@ -104,7 +104,7 @@
 				
 			}catch( e ){
 				
-				console.error( e.message );
+				//console.error( e.message );
 				
 			}
 			
@@ -117,7 +117,7 @@
 				
 			}catch( e ){
 				
-				console.error( e.message );
+				//console.error( e.message );
 				
 			}
 			

@@ -1,3 +1,23 @@
+/* latin */
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bangers'), local('Bangers-Regular'), url(google/yJQgrSMUoqRj-0SbnQsv4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fredoka One'), local('FredokaOne-Regular'), url(google/SL0aFUFfkFMMdariYQ3_YY4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+
 ::-webkit-scrollbar-track{
     
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)!important;

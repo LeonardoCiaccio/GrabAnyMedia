@@ -24,7 +24,7 @@
 
 	if( !loader )return false;
 			
-	console.info( "[ GAM ] : Looking for Media tags" );
+	//console.info( "[ GAM ] : Looking for Media tags" );
 	
 	var links 		= [],
 		searchlinks = function( text ){
@@ -48,11 +48,11 @@
 			
 		}
 		
-		console.info( "[ GAM ] : Video catched ( " + links.length + " )" );
+		//console.info( "[ GAM ] : Video catched ( " + links.length + " )" );
 		
 	}catch( e ){}
 			
-	console.info( "[ GAM ] : Looking for Embed tags" );
+	//console.info( "[ GAM ] : Looking for Embed tags" );
 	
 // ( it ) --> Controllo i tag Embed
 	
@@ -74,7 +74,7 @@
 			
 		}// for
 		
-		console.info( "[ GAM ] : Embed catched ( " + links.length + " )" );
+		//console.info( "[ GAM ] : Embed catched ( " + links.length + " )" );
 		
 	}catch( e ){}
 */
@@ -112,7 +112,7 @@
 
 	}// for
 
-	console.info( "[ GAM ] : All my elements catched ( " + links.length + " )" );
+	//console.info( "[ GAM ] : All my elements catched ( " + links.length + " )" );
 	
 	loader( links, false );
 		

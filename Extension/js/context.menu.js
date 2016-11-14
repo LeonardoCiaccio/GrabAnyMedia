@@ -20,6 +20,8 @@
 	
 	if( !$ || !$.gam )throw new Error( chrome.i18n.getMessage( "e3" ) );
 	
+	window.myGA = window.myGA || function(){};
+	
 // ( it ) --> Il Main menu
 	
 	var id0 = chrome.contextMenus.create( {
@@ -97,7 +99,7 @@
 					
 				} );
 				
-				_gaq.push( [ "_trackEvent", "Domain Most Used", "run", "context menu" ] );
+				window.myGA( "Domain Most Used", "run", "context menu" );
 						
 			}
 
@@ -118,7 +120,7 @@
 
 				window.open( server );
 
-				_gaq.push( [ "_trackEvent", "OpenDB", "run", searching ] );
+				window.myGA( "OpenDB", "run", searching );
 
 			}
 
@@ -145,7 +147,7 @@
 
 				} );
 
-				_gaq.push( [ "_trackEvent", "MEV Cinema", "run", searching ] );
+				window.myGA( "MEV Cinema", "run", searching );
 
 			}
 

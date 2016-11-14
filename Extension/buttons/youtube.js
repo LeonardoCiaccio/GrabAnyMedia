@@ -25,11 +25,11 @@
 			YO = [],
 			YD;
 
-		console.info( "[ GAM ] : Searching YT object ..." );
+		//console.info( "[ GAM ] : Searching YT object ..." );
 		
 		if( !Y ){
 			
-			console.info( "[ GAM ] : YT object not found" );
+			//console.info( "[ GAM ] : YT object not found" );
 			
 			return YO;
 		
@@ -43,7 +43,7 @@
 
 		}catch( e ){
 			
-			console.info( "[ GAM ] : YT object found but without params" );
+			//console.info( "[ GAM ] : YT object found but without params" );
 			
 			return YO;
 		
@@ -102,7 +102,7 @@
 		
 	};
 	
-	console.log( "[ GAM ] Running module buttons ..." );
+	//console.log( "[ GAM ] Running module buttons ..." );
 	
 	var installbuttons = function(){
 			
@@ -110,12 +110,12 @@
 		
 		if( !window.gambuttonbuilder || document.querySelector( "." + signature ) )return false;
 		
-		console.log( "[ GAM ] Search links ..." );
+		//console.log( "[ GAM ] Search links ..." );
 		
 		var all 		= links(),
 			installed   = true;
 		
-		console.log( "[ GAM ] New links (" + all.length + ")" );
+		//console.log( "[ GAM ] New links (" + all.length + ")" );
 		
 		for( var i = 0; installed && i < all.length; i++ ){
 			
@@ -136,18 +136,18 @@
 				
 				if( window.gambuttonbuilder( all[ i ].url, mytarget, all[ i ].quality + " / " + all[ i ].type ) ){
 					
-					console.log( "[ GAM ] Installed (" + all[ i ].url + ")" );
+					//console.log( "[ GAM ] Installed (" + all[ i ].url + ")" );
 					
 				}else{
 					
-					console.log( "[ GAM ] Problems with (" + all[ i ].url + ")" );
+					//console.log( "[ GAM ] Problems with (" + all[ i ].url + ")" );
 					
 				}
 								
 			}catch( e ){
 				
 				installed = false;
-				console.log( e.message );
+				//console.log( e.message );
 				
 			}
 			
@@ -166,7 +166,7 @@
 		
 	}; // installbuttons
 	
-	console.log( "[ GAM ] SetUp to observe ..." );
+	//console.log( "[ GAM ] SetUp to observe ..." );
 
 	var toobserv = document.body;
 
@@ -186,7 +186,7 @@
 
 	observer.observe( toobserv, config );
 
-	console.log( "[ GAM ] Observe all change !" );
+	//console.log( "[ GAM ] Observe all change !" );
 	
 	installbuttons();
 	

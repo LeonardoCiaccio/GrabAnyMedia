@@ -20,11 +20,13 @@
 	
 	if( !$ || !$.gam )throw new Error( chrome.i18n.getMessage( "e2" ).replace( "%s", "background.js" ) );
 	
+	window.myGA = window.myGA || function(){};
+	
 // ( it ) --> 
 	
 	chrome.runtime.onInstalled.addListener( function( details ){
 					
-		_gaq.push( [ "_trackEvent", "Extension", details.reason, chrome.runtime.getManifest().version ] );
+		window.myGA( "Extension", details.reason, chrome.runtime.getManifest().version );
 		
 	} );
 	
@@ -89,7 +91,7 @@
 			
 		}catch( e ){}
 		
-		_gaq.push( [ "_trackEvent", "Domain Most Used", "run", "icon bar" ] );
+		window.myGA( "Domain Most Used", "run", "icon bar" );
 		
 	} );
 	
@@ -151,7 +153,7 @@
 
 	} );
 			
-	_gaq.push( [ "_trackEvent", "Extension", "new session", chrome.runtime.getManifest().version ] );
+	window.myGA( "Extension", "new session", chrome.runtime.getManifest().version );
 	
 } )( window.jQuery );
 

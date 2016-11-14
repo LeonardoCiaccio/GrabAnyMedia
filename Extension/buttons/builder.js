@@ -53,7 +53,7 @@
 				"font-family:monospace!important"
 				
 			].join( ";" ) );
-			link.innerText = text;
+			link.textContent = text;
 			
 		// ( it ) --> Il Logo
 			

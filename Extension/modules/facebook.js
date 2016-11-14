@@ -34,7 +34,7 @@
 					
 					response.push( objdata.video_data.progressive.hd_src );					
 					
-					console.info( "[ GAM ] : " + key + " HD ( "+ objdata.video_data.progressive.hd_src + " )" );
+					//console.info( "[ GAM ] : " + key + " HD ( "+ objdata.video_data.progressive.hd_src + " )" );
 					
 				}catch( e ){}
 				
@@ -44,7 +44,7 @@
 					
 					response.push( objdata.video_data.progressive.sd_src );					
 					
-					console.info( "[ GAM ] : " + key + " SD ( "+ objdata.video_data.progressive.sd_src + " )" );
+					//console.info( "[ GAM ] : " + key + " SD ( "+ objdata.video_data.progressive.sd_src + " )" );
 					
 				}catch( e ){}
 				

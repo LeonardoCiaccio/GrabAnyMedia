@@ -63,7 +63,7 @@
 
 	};
 
-	console.log( "[ GAM ] Loading younow module" );
+	//console.log( "[ GAM ] Loading younow module" );
 
 	if( !loader )return false;
 	
@@ -75,18 +75,18 @@
 		
 	if( !match ){
 		
-		console.log( "[ GAM ] Bad link for younow user" );
+		//console.log( "[ GAM ] Bad link for younow user" );
 		return false;
 		
 	}
 	
 	var username = match[ 0 ].replace( filter, "" ).trim();
 
-	console.info( "[ GAM ] : Looking for data" );
+	//console.info( "[ GAM ] : Looking for data" );
 
 	if( !username || username == "" )return false;
 	
-	console.info( "[ GAM ] : Request data" );
+	//console.info( "[ GAM ] : Request data" );
 	
 	try{
 		
@@ -94,7 +94,7 @@
 		
 		var xhr = getXHR();
 
-		console.info( "[ GAM ] : Request user info !" );
+		//console.info( "[ GAM ] : Request user info !" );
 		
 		xhr.open( "GET", userinfo + username, true );
 
@@ -106,11 +106,11 @@
 
 				loader( [ m3u8 + source.broadcastId ], false );
 		
-				console.info( "[ GAM ] : Pinged" );
+				//console.info( "[ GAM ] : Pinged" );
 
 			}catch( e ){
 
-				console.error( "[ GAM ] : " + e.message );
+				//console.error( "[ GAM ] : " + e.message );
 
 			}					
 
