@@ -325,7 +325,7 @@
 				ext  : "mka"
 				
 			},
-			links : "((mms|rtp|rtsp:|rtmp|rtmpe|rtmpt|rtmps|rtmpte|rtmp|rtmpe|http|https){1}?:?\\\\?\\/?\\\\?\\/[^\\s\\\"\\'<>\\(\\)\\[\\]\\{\\}]+)",
+			links : "((mms|rtp|rtsp|rtmp|rtmpe|rtmpt|rtmps|rtmpte|rtmp|rtmpe|http|https){1}?:?\\\\?\\/?\\\\?\\/[^\\s\\\"\\'<>\\(\\)\\[\\]\\{\\}]+)",
 			tests : [
 				
 				"(mms:\\/\\/|rtp:\\/\\/|rtsp:\\/\\/|rtmp:\\/\\/|rtmpe:\\/\\/|rtmpt:\\/\\/|rtmps:\\/\\/|rtmpte:\\/\\/|video\\/x\\-flv|video\\/flv|video\\/x\\-f4v|video\\/3gpp|video\\/3gpp2|application\\/vnd\\.apple\\.mpegurl|video\\/mp4|video\\/x\\-mp4|video\\/avi|video\\/x\\-avi|video\\/x\\-ms\\-wmv|video\\/x\\-ms\\-wvx|video\\/webm|video\\/mpg|video\\/x\\-mpg|video\\/mpeg|video\\/x\\-mpeg|video\\/x\\-matroska|video\\/x\\-matroska\\-3d|application\\/f4m\\+xml|video\\/f4m|video\\/f4f|audio\\/x\\-mp3|audio\\/x\\-mpeg3|audio\\/x\\-mpg|audio\\/x\\-mpeg|audio\\/mpg|audio\\/mpeg|audio\\/mp3|audio\\/ogg|audio\\/x\\-matroska)",
@@ -404,7 +404,7 @@
 			"youtube" : {
 				
 				enabled : true,
-				code 	: "!function(){var t='gambutton',e='watch-header',r=function(){var t,e=window.ytplayer,r=[];if(!e)return r;try{t=e.config.args.url_encoded_fmt_stream_map}catch(a){return r}try{for(var n=t.split(','),o=0;o<n.length;o++){for(var i=n[o].split('&'),c={},u=0;u<i.length;u++){var d=i[u].split('='),s=decodeURIComponent(d[0].toUpperCase()),l=decodeURIComponent(d[1]);switch(s){case'TYPE':c.type=l;break;case'QUALITY':c.quality=l;break;case'URL':c.url=l}}c.type&&c.quality&&c.url&&r.push(c)}return r}catch(a){return r}},a=function(){if(!window.gambuttonbuilder||document.querySelector('.'+t))return!1;for(var a=r(),n=!0,o=0;n&&o<a.length;o++)try{var i=document.getElementById(e);if(a[o].url.indexOf('signature')<0){window.gambuttonbuilder(document.location.href.replace('youtube','10youtube'),i,'Can\\'t grab this video, use external service !',!0);break}window.gambuttonbuilder(a[o].url,i,a[o].quality+' / '+a[o].type)}catch(c){n=!1}if(n){var i=document.getElementById(e);i&&!i.classList.contains(t)&&i.classList.add(t)}},n=document.body;if(!n)return!1;var o=new MutationObserver(function(t){t.forEach(function(){a()})}),i={attributes:!0,childList:!0,characterData:!0};o.observe(n,i),a()}();"
+				code 	: "!function(){var t='gambutton',e='watch-header',r=function(){var t,e=window.ytplayer,r=[];if(!e)return r;try{t=e.config.args.url_encoded_fmt_stream_map}catch(a){return r}try{for(var n=t.split(','),o=0;o<n.length;o++){for(var i=n[o].split('&'),c={},u=0;u<i.length;u++){var d=i[u].split('='),s=decodeURIComponent(d[0].toUpperCase()),l=decodeURIComponent(d[1]);switch(s){case'TYPE':c.type=l;break;case'QUALITY':c.quality=l;break;case'URL':c.url=l}}c.type&&c.quality&&c.url&&r.push(c)}return r}catch(a){return r}},a=function(){if(!window.gambuttonbuilder||document.querySelector('.'+t))return!1;for(var a=r(),n=!0,o=0;n&&o<a.length;o++)try{var i=document.getElementById(e);if(a[o].url.indexOf('signature')<0){window.gambuttonbuilder(document.location.href.replace('youtube','10youtube'),i,'" + chrome.i18n.getMessage( "m19" ) + "',!0);break}window.gambuttonbuilder(a[o].url,i,a[o].quality+' / '+a[o].type)}catch(c){n=!1}if(n){var i=document.getElementById(e);i&&!i.classList.contains(t)&&i.classList.add(t)}},n=document.body;if(!n)return!1;var o=new MutationObserver(function(t){t.forEach(function(){a()})}),i={attributes:!0,childList:!0,characterData:!0};o.observe(n,i),a()}();"
 				
 			}
 			
