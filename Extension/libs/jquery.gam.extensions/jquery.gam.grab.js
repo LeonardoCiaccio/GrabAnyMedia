@@ -77,8 +77,12 @@
 							if( headers.type && headers.size > -1 )return false;
 							
 							if( v.name.match( /content-type/gi ) ){
-						
-						// ( it ) --> Se octetstream, devo controllare
+							
+							// ( it ) --> Potrebbe avere testo aggiuntivo, es ....; charset ....
+								
+								v.value = v.value.split( ";" )[ 0 ];
+								
+							// ( it ) --> Se octetstream, devo controllare
 								
 								if( v.value == "application/octet-stream" ){
 									
