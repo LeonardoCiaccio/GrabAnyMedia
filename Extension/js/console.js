@@ -1088,7 +1088,7 @@
 				
 			}
 			
-			var name 	= "GrabAnyMedia.download.list.gam",
+			var name 	= "GrabAnyMedia.download.list.txt",
 				dwnlist = "";
 
 			$list.children().each( function(){
