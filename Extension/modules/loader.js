@@ -20,7 +20,7 @@
 		fakedomain = "//localhost/?",
 		pingout	   = 2000;
 		
-// ( it ) --> Potreemo essere su browser sconosciuti
+// ( it ) --> Potremmo essere su browser sconosciuti
 	
 	var getXHR = function(){
 		

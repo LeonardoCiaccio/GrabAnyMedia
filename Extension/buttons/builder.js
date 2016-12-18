@@ -50,7 +50,8 @@
 				
 				"text-decoration:none!important",
 				"font-size:11px!important",
-				"font-family:monospace!important"
+				"font-family:monospace!important",
+				"color:rgb(224, 157, 31)!important"
 				
 			].join( ";" ) );
 			link.textContent = text;
