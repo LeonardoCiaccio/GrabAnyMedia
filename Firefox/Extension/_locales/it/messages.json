@@ -1,0 +1,224 @@
+{	
+    
+    "des" : {
+        "message": "Cattura quasi tutti i media presenti online, video, audio e streaming"
+    },
+	"d" : {
+        "message": "Ciao, mi chiamo Leonardo Ciaccio, ho sviluppato e mantengo in vita questo progetto perché ritengo che sia molto utile. Una estensione che utilizzo tutti i giorni perché come voi ho la passione per i video e per le canzoni, 'Grab Any Media' cresce nel tempo anche grazie il vostro aiuto, i vostri consigli. Questa estensione è open-source pertanto chiunque può verificare il codice alla ricerca di imperfezioni. Se volete aiutare questo progetto dovete solo condividerlo e renderlo popolare, siamo oltre 500.000 ad utilizzarlo. Grazie !"
+    },
+	"d1" : {
+        "message": "Questa versione di 'Grab Any Media' è obsoleta, scarica l'ultima versione aggiornata, ti ci porto io ?"
+    },
+	"slogan" : {
+        "message": "posso catturare tutti i media su internet, in caso contrario usa lo scanner per trovare i link"
+    },
+	"e1" : {
+        "message": "La versione corrente di 'Grab Any Media' richiede jQuery !"
+    },
+	"e2" : {
+        "message": "La versione corrente di '%s' richiede jQuery.gam !"
+    },
+	"e3" : {
+        "message": "Il context menu richiede '$.gam' !"
+    },
+	"e4" : {
+        "message": "Ricarica la pagina, non trovo l'inspector !"
+    },
+	"e5" : {
+        "message": "😜 sei nel posto sbagliato, ti sei perso ?"
+    },
+	"m" : {
+        "message": "Grab Any Media"
+    },
+	"m1" : {
+        "message": "attendere prego, recupero i files ..."
+    },
+	"m2" : {
+        "message": "Copiato"
+    },
+	"m3" : {
+        "message": "Per utilizzare Grab Any Media devi ricaricare questa pagina, ci penso io ?"
+    },
+	"m4" : {
+        "message": "Non ho trovato nulla"
+    },
+	"m5" : {
+        "message": "prova con lo scanner potresti trovare qualcosa, oppure controlla la dimensione minima nelle 'Opzioni' potrebbe essere troppo alta prova ad abbassare il valore per catturare files di dimensioni più piccole"
+    },
+	"m6" : {
+        "message": "Troppi risultati ? filtrali !"
+    },
+	"m7" : {
+        "message": "Tipo di file"
+    },
+	"m8" : {
+        "message": "Dimensioni"
+    },
+	"m9" : {
+        "message": "Testo nel link"
+    },
+	"m10" : {
+        "message": "Filtrati / Totale"
+    },
+	"m11" : {
+        "message": "Ehmmm, non vedi che la lista è vuota ?"
+    },
+	"m12" : {
+        "message": "Prima seleziona il video cliccando su 'Anteprima' e poi esegui questa operazione"
+    },
+	"m13" : {
+        "message": "Qui puoi definire la dimensione minima dei media, quando si apre e/o aggiorna una pagina Grab Any Media registra tutti i media che interessano, per evitare di registrare tanta spazzatura come frammenti pubblicitari e altro puoi impostare una dimensione minima pertanto verranno registrati solo i media superiori a quel valore risparmiando risorse preziose. Puoi utilizzare valori come ad esempio '1.2 MB' oppure '500 KB' per definire il numero di bytes."
+    },
+	"m14" : {
+        "message": "Dimensioni minime"
+    },
+	"m15" : {
+        "message": "Salvato, aggiorna tutte le tabs aperte per le modifiche !"
+    },
+	"m16" : {
+        "message": "Si definiscono quanti records ( media e documenti ) devono essere registrati per ogni singola sessione. Per risparmiare spazio e risorse si rende necessario limitare questo valore, se ad esempio vorremmo impostare un valore di '1000' al raggiungimento di tale valore verrebbero sovrascritti i valori più vecchi garantendo sempre un riciclo di '1000' records. Se hai intenzione di registrare molti frammenti non devi aumentare questo valore ti basterà lasciare aperta la console e magari ridurla a icona."
+    },
+	"m17" : {
+        "message": "Records"
+    },
+	"m18" : {
+        "message": "minimo"
+    },
+	"m19" : {
+        "message": "Non posso scaricare questo video, click su questo link per aprire un servizio esterno !"
+    },
+	"m20" : {
+        "message": "Download"
+    },
+	"m21" : {
+        "message": "Puoi commentare tutte le pagine online su qualsiasi sito !"
+    },
+	"n" : {
+        "message": "Downloads"
+    },
+	"t1" : {
+        "message": "Media"
+    },
+	"t2" : {
+        "message": "Scanner"
+    },
+	"t3" : {
+        "message": "Opzioni"
+    },
+	"t4" : {
+        "message": "F.A.Q."
+    },
+	"t5" : {
+        "message": "Info"
+    },
+	"t6" : {
+        "message": "Copia"
+    },
+	"t7" : {
+        "message": "Apri"
+    },
+	"t8" : {
+        "message": "Scarica"
+    },
+	"t9" : {
+        "message": "Pulisci"
+    },
+	"t10" : {
+        "message": "Ricarica"
+    },
+	"t11" : {
+        "message": "Rimuovi filtri"
+    },
+	"t12" : {
+        "message": "Esporta"
+    },
+	"t13" : {
+        "message": "Appunti"
+    },
+	"t14" : {
+        "message": "Anteprima"
+    },
+	"t15" : {
+        "message": "Dimensioni"
+    },
+	"t16" : {
+        "message": "Cache"
+    },
+	"t17" : {
+        "message": "Crawl"
+    },
+	"t18" : {
+        "message": "Analizza"
+    },
+	"t19" : {
+        "message": "Elaborazione ..."
+    },
+	"t20" : {
+        "message": "Decodifica"
+    },
+	"t21" : {
+        "message": "OpenDB raccoglie informazioni anonime inerenti alcuni siti, come ad esempio 'openload', che non indicizzano i propri db, pertanto è molto difficile trovare su internet eventuali films ad essi collegati. Con OpenDB vengono messe a disposizione queste informazioni, il funzionamento è semplice, un utente visita uno di questi host e se ci sono le condizioni invia queste informazioni in forma del tutto anonime a vantaggio di tutta la comunità. Il tuo contributo rende questo strumento più potente, grazie!"
+    },
+	"t22" : {
+        "message": "Commenti"
+    },
+	"t23" : {
+        "message": "Commenta questa pagina"
+    },
+	"cod1" : {
+        "message": "per 'Apple Itunes'"
+    },
+	"cod2" : {
+        "message": "per 'VLC'"
+    },
+	"cod3" : {
+        "message": "manifest"
+    },
+	"cod4" : {
+        "message": "frammento"
+    },
+	"cod5" : {
+        "message": "per 'RTMPDump -W'"
+    },
+    "g" : {
+        "message": "Console"
+    },
+    "g1" : {
+        "message": "OpenDB"
+    },
+    "g2" : {
+        "message": "MEV Cinema"
+    },
+    "mevtitle" : {
+        "message": "Titolo per questo video"
+    },
+    "mevnotsupported" : {
+        "message": "Questo browser non supporta MEV"
+    },
+    "mevmoresource" : {
+        "message": "Ho evidenziato possibili codici da incorporare, clicca sul bordo rosso per aggiungerlo"
+    },
+    "mevmorevideo" : {
+        "message": "Ho evidenziato possibili embed da aggiungere, clicca sul bordo rosso per aggiungerlo"
+    },
+    "mevconfirm" : {
+        "message": "Non ho trovato nulla qui vuoi aprire MEV app ?"
+    }
+      
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
