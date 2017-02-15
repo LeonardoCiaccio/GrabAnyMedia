@@ -68,13 +68,13 @@
 						
 						var headers = {
 							
-							size : -1
+							size : 0
 							
 						};
 							
 						$.each( details.responseHeaders, function( i, v ){
 							
-							if( headers.type && headers.size > -1 )return false;
+							if( headers.type && headers.size > 0 )return false;
 							
 							if( v.name.match( /content-type/gi ) ){
 							

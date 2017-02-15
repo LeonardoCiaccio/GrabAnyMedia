@@ -369,7 +369,7 @@
 		
 		var sizeing = function( size ){
 			
-		// ( it ) --> Potrebbe essere -1
+		// ( it ) --> Potrebbe essere -2
 			
 			size = ( size < 0 ) ? 0: size;
 			
@@ -444,7 +444,7 @@
 				
 			// ( it ) --> Proseguo per i media gestiti
 				
-				var $existitem  = $( ".listmedia .selection.list [data-link-item='" + data.url + "']" )
+				var $existitem  = $( ".listmedia .selection.list [data-link-item='" + data.url + "']" ),
 					sized		= sizeing( parseInt( headers.size ) );
 				
 				var	ext			= ( filter ) ? filter.ext : headers.type,
