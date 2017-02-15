@@ -17,7 +17,7 @@
 ( function(){
 
 	var signature = "gambutton",
-		target    = "watch-header";
+		target    = "pla-shelf";
 	
 	var links = function(){
 		

@@ -456,9 +456,11 @@
 				if( $existitem.length > 0 ){
 
 					var len = parseInt( $existitem.attr( "data-item-count" ) ) || 0;
+					
 					$existitem.attr( "data-item-count", ( len + 1 ) );
+					$existitem.attr( "data-link-size", headers.size );
+					$existitem.attr( "data-link-type", ext );
 					$existitem.find( ".mytype" ).text( "(" + ( len + 1 ) + ") " + type + " " + ext.toUpperCase() + cod );
-
 					$existitem.find( ".side.first" ).text( "(" + sized + ") " +  decodeURIComponent( data.url ) );
 
 				}else{
@@ -557,7 +559,7 @@
 		
 		var filtermediabis = function(){
 			
-			var fltext  = $( "#fltext" ).val().trim() || "",
+			var fltext  = $( "#fltext" ).val().toLocaleLowerCase().trim() || "",
 				fltsize = transmutesize( $( "#fltsize" ).val().trim() ),
 				flturl  = $( "#flturl" ).val().trim() || "";
 			
@@ -643,7 +645,7 @@
 		
 		var filtermediaitem = function( $item ){
 			
-			var fltext  = $( "#fltext" ).val().trim() || "",
+			var fltext  = $( "#fltext" ).val().toLocaleLowerCase().trim() || "",
 				fltsize = transmutesize( $( "#fltsize" ).val().trim() ),
 				flturl  = $( "#flturl" ).val().trim() || "";
 				

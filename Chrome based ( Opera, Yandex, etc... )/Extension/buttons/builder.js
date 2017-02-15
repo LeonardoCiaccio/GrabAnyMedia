@@ -70,7 +70,7 @@
 			
 		// ( it ) --> Il bottone
 			
-			button.setAttribute( "style", "margin:15px!important" );
+			button.setAttribute( "style", "padding-bottom:15px!important" );
 			
 		// ( it ) --> Costruisco e restituisco il bottone pronto da installare
 			
