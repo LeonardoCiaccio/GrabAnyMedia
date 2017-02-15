@@ -152,7 +152,9 @@
 			var open  = new RegExp( "<", "gi" ),
 				close = new RegExp( ">", "gi" );
 
-			return text.replace( open, "&lt;" ).replace( close, "&gt;" );
+		// ( it ) --> Aggiungo uno spazio per evitare che nei link compaiano dei tags
+			
+			return text.replace( open, " &lt;" ).replace( close, " &gt;" );
 
 		};
 		
