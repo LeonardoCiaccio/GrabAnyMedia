@@ -124,7 +124,7 @@
 			if( exubero > -1 )db.splice( 0, ( exubero + 1 ) );
 			
 			db.push( request.store );
-			
+		//console.log(JSON.parse(atob(request.store)).url);	
 			sessionStorage[ storage ] = JSON.stringify( db );
 			
 		} // <-- onStorage

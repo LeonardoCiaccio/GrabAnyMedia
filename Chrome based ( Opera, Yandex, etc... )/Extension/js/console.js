@@ -163,7 +163,7 @@
 			if( !store )return false;
 			
 			onend = onend || function(){};
-		
+		//console.log(store.url);
 			$.ajax( {
 				
 				url		 : store.url,
