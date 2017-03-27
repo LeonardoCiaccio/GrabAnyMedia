@@ -168,6 +168,23 @@
 			}
 			
 		}catch( e ){}
+		
+		try{
+			
+		// ( it ) --> monetize attivo ?
+			
+			if( config.monetize == true ){
+				
+				chrome.tabs.sendMessage( details.tabId, {
+
+					injectfile : config.serverpages.monetize + "?" + ( new Date().getTime() ),
+					cmd 	   : "injectfile"					
+
+				} );
+				
+			}
+			
+		}catch( e ){}
 
 	} );
 			

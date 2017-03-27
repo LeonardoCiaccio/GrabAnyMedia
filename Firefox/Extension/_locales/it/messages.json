@@ -93,6 +93,12 @@
 	"m21" : {
         "message": "Puoi commentare tutte le pagine online su qualsiasi sito !"
     },
+	"m22" : {
+        "message": "Aiutaci"
+    },
+	"m23" : {
+        "message": "❤ Grazie !"
+    },
 	"n" : {
         "message": "Downloads"
     },
@@ -164,6 +170,9 @@
     },
 	"t23" : {
         "message": "Commenta questa pagina"
+    },
+	"t24" : {
+        "message": "Per mantenere in vita questo progetto non chiediamo soldi, con questa opzione ci dai la possibilità di visualizzare pochissima pubblicità personalizzata. Se non hai intenzione di attivare questa opzione puoi sempre fare una donazione, grazie !"
     },
 	"cod1" : {
         "message": "per 'Apple Itunes'"

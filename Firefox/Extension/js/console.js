@@ -824,6 +824,7 @@
 						$( ".core" ).text( " ( core " + options.filters.version + " )" );
 						
 						$( "#opendb" ).prop( "checked", options.opendb.enabled );
+						$( "#monetize" ).prop( "checked", options.monetize );
 						
 						if( options.lastversion > chrome.runtime.getManifest().version ){
 							
@@ -901,10 +902,12 @@
 		
 		$( ".tab.segment [data-tab='optsize'] .descr" ).text( chrome.i18n.getMessage( "m13" ) );
 		$( ".tab.segment [data-tab='optbuffer'] .descr" ).text( chrome.i18n.getMessage( "m16" ) ); 
-		$( ".tab.segment [data-tab='optopendb'] .descr" ).text( chrome.i18n.getMessage( "t21" ) ); 
+		$( ".tab.segment [data-tab='optopendb'] .descr" ).text( chrome.i18n.getMessage( "t21" ) );
+		$( ".tab.segment [data-tab='optmonetize'] .descr" ).text( chrome.i18n.getMessage( "t24" ) ); 
 		
 		$( ".lbloptsize" ).text( chrome.i18n.getMessage( "m14" ) );
 		$( ".lbloptcache" ).text( chrome.i18n.getMessage( "m17" ) );
+		$( ".lbloptmonetize" ).text( chrome.i18n.getMessage( "m22" ) );
 		
 		$( "#mydescription" ).text( chrome.i18n.getMessage( "d" ) );
 		
@@ -1419,6 +1422,43 @@
 					$target.popup( "destroy" );
 
 				}, 2000 );
+
+			} );
+			
+		} );
+		
+		$( "#monetize" ).click( function(){
+						
+			chrome.runtime.sendMessage( {
+
+				exe 		: "updateAlloptions",
+				newsettings : {
+
+					monetize : $( this ).is( ":checked" )
+
+				}
+
+			}, function(){
+
+				var $target = $( "#monetize" );
+
+				if( $target.is( ":checked" ) ){
+					
+					$target.popup( {
+
+						position : "top center",
+						content  : chrome.i18n.getMessage( "m23" ),
+						on    : "click"
+
+					} ).popup( "show" );
+
+					setTimeout( function(){
+
+						$target.popup( "destroy" );
+
+					}, 2000 );	
+					
+				}
 
 			} );
 			

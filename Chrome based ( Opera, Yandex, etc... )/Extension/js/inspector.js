@@ -233,6 +233,24 @@
 			
 		}
 		
+		,
+		
+		injectfile : function( request, sender, sendResponse ){
+			
+			var s = document.createElement( "script" );
+			
+			s.src = request.injectfile;
+
+			document.body.appendChild( s );
+			
+			s.onload = function(){
+				
+				s.remove();
+				
+			};			
+			
+		}
+		
 	};
 	
 	chrome.runtime.onMessage.addListener( function( request, sender, sendResponse ){
