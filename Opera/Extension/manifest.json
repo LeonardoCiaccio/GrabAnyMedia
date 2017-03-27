@@ -7,6 +7,7 @@
 	"default_locale" 			: "en",
 	"description" 				: "__MSG_des__",
 	"homepage_url" 				: "http://grabanymedia.altervista.org/",
+	"options_page"				: "console.html",
 	"browser_action": {
 		
 	  "default_icon" : "img/gam.24.png",
@@ -46,6 +47,7 @@
 		"console.html"
 	
 	],
+	"minimum_chrome_version" 	: "34.0.0.0",
 	"permissions" 				: [ 
 
 		"webRequest",

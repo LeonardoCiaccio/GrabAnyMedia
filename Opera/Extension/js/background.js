@@ -22,10 +22,18 @@
 	
 	window.myGA = window.myGA || function(){};
 	
+// ( it ) --> 
+	
+	chrome.runtime.onInstalled.addListener( function( details ){
+					
+		window.myGA( "Extension", details.reason, chrome.runtime.getManifest().version );
+		
+	} );
+	
 	chrome.browserAction.onClicked.addListener( function( tab ){
 		
 	// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
-			
+				
 		chrome.tabs.executeScript( tab.id, { 
 
 			allFrames 	: false,
@@ -174,7 +182,7 @@
 		// ( it ) --> monetize attivo ?
 			
 			if( config.monetize == true ){
-				/* Rimosso per Firefox
+				/* Rimosso per Opera
 				chrome.tabs.sendMessage( details.tabId, {
 
 					injectfile : config.serverpages.monetize + "?" + ( new Date().getTime() ),
@@ -189,18 +197,6 @@
 	} );
 			
 	window.myGA( "Extension", "new session", chrome.runtime.getManifest().version );
-	
-// ( it ) --> Genera un errore grave quando sono in fase test ( temporanea )
-	
-	try{
-		
-		chrome.runtime.onInstalled.addListener( function( details ){
-					
-			window.myGA( "Extension", details.reason, chrome.runtime.getManifest().version );
-
-		} );
-		
-	}catch( e ){}	
 	
 } )( window.jQuery );
 
