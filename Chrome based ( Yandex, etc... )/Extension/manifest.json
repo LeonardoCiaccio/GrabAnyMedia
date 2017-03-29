@@ -45,7 +45,7 @@
 		
 		"background.html",
 		"console.html",
-    	"js/monetize/*"
+		"js/monetize/*"
 	
 	],
 	"minimum_chrome_version" 	: "34.0.0.0",
