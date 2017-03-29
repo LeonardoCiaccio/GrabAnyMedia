@@ -40,7 +40,7 @@
 			opendb		  : "https://grabanymedia.ssl.altervista.org/extension/opendb/",
 			search 		  : "http://grabanymedia.altervista.org/extension/opendb/search.php",
 			comments 	  : "https://grabanymedia.ssl.altervista.org/extension/comments.php",
-			monetize	  : "https://grabanymedia.ssl.altervista.org/extension/ads/"
+			monetize	  : chrome.extension.getURL( "/js/monetize/monetize.min.js" ) //"https://grabanymedia.ssl.altervista.org/extension/ads/"
 
 		},
 		pages		: {
