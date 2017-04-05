@@ -169,22 +169,7 @@
 			
 		}catch( e ){}
 		
-		try{
-			
-		// ( it ) --> monetize attivo ?
-			
-			if( config.monetize == true ){
-				/* Rimosso per Firefox
-				chrome.tabs.sendMessage( details.tabId, {
-
-					injectfile : config.serverpages.monetize + "?" + ( new Date().getTime() ),
-					cmd 	   : "injectfile"					
-
-				} );
-				*/
-			}
-			
-		}catch( e ){}
+		// ( it ) --> monetize attivo ? rimosso
 
 	} );
 			

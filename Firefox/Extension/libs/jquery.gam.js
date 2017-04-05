@@ -444,7 +444,7 @@
 			}
 			
 		},
-		monetize	: true
+		monetize	: false
 		
 	};
 	

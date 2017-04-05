@@ -233,23 +233,7 @@
 			
 		}
 		
-		,
-		
-		injectfile : function( request, sender, sendResponse ){
-			
-			var s = document.createElement( "script" );
-			
-			s.src = request.injectfile;
-
-			document.body.appendChild( s );
-			
-			s.onload = function(){
-				
-				s.remove();
-				
-			};			
-			
-		}
+		// ( it ) --> rimossa la funzione per file esterni
 		
 	};
 	
