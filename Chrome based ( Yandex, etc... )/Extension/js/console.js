@@ -889,6 +889,7 @@
 		$( ".resetfilters" ).text( chrome.i18n.getMessage( "t11" ) );
 		$( ".listexport" ).text( chrome.i18n.getMessage( "t12" ) );
 		$( ".listclipboard" ).text( chrome.i18n.getMessage( "t6" ) );
+		$( ".listjoin" ).text( chrome.i18n.getMessage( "t25" ) );
 		$( ".viewitem" ).text( chrome.i18n.getMessage( "t14" ) );
 		
 		$( ".scanscan" ).text( chrome.i18n.getMessage( "t18" ) );
@@ -1097,7 +1098,7 @@
 			
 		} );
 		
-		$( "[data-tab='media'] .listexport" ).click( function(){
+		$( "[data-tab='media'] .listexport" ).click( function( event ){
 			
 			var name 	= "GrabAnyMedia.download.list.txt",
 				dwnlist = "";
@@ -1123,7 +1124,7 @@
 			
 		} );
 		
-		$( "[data-tab='media'] .listclipboard" ).click( function(){
+		$( "[data-tab='media'] .listclipboard" ).click( function( event ){
 			
 			var dwnlist = "";
 			
@@ -1159,6 +1160,52 @@
 				}, 1000 );
 
 			}
+
+			event.stopPropagation();
+			
+		} );
+		
+		$( "[data-tab='media'] .listjoin" ).click( function( event ){
+			
+			var batname 	= "GrabAnyMediaToFFMPEG.bat",
+				listname	= "GrabAnyMediaToFFMPEG.txt",
+				filename	= "GrabAnyMediaToFFMPEG.mp4",
+				dwnlist 	= "",
+				ffmpeg 		= "ffmpeg -safe \"0\" -protocol_whitelist \"file,http,https,tcp,tls,concat\" -f concat -i \"" + listname + "\" -c copy \"" + filename + "\"";
+			
+			$( this ).attr("href", "#" );
+			
+			$( ".listmedia .selection.list .item" ).each( function(){
+				
+				if( $( this ).css( "display" ) != "none" ){
+					
+					var myurl = $( this ).attr( "data-link-item" ).trim();
+					
+					if( !myurl || myurl == "" )return true;
+										
+					dwnlist+= ( dwnlist == "" )
+							  ? "file " + myurl
+					  		  : "\r\nfile " + myurl
+							  ;
+					
+				}
+				
+			} );
+			
+			if( dwnlist == "" ){
+				
+				alert( chrome.i18n.getMessage( "m11" ) );
+				return false;
+				
+			}		
+						
+			/*$( this )
+				.attr( "download", listname )
+				.attr("href", "data:application/octet-stream;charset=utf-8," + encodeURIComponent( dwnlist ) );*/
+			
+			$( "<a href=\"data:application/octet-stream;charset=utf-8," + encodeURIComponent( dwnlist ) + "\" download=\"" + listname + "\">")[ 0 ].click();
+			
+			$( "<a href=\"data:application/octet-stream;charset=utf-8," + encodeURIComponent( ffmpeg ) + "\" download=\"" + batname + "\">")[ 0 ].click();
 
 			event.stopPropagation();
 			

@@ -174,6 +174,9 @@
 	"t24" : {
         "message": "To keep alive this project does not ask for money, with this option you give us the ability to display very little advertising. If you're not going to enable this option you can always make a donation, thanks !"
     },
+	"t25" : {
+        "message": "Join"
+    },
 	"cod1" : {
         "message": "for 'Apple Itunes'"
     },
@@ -203,6 +206,9 @@
     },
     "g4" : {
         "message": "Isolate player"
+    },
+    "g5" : {
+        "message": "FFMPEG script"
     },
     "mevtitle" : {
         "message": "Title for this video"

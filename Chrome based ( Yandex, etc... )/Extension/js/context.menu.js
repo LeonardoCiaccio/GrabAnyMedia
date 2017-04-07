@@ -214,6 +214,42 @@
 			}
 
 	} );
+	
+// ( it ) --> Separo
+	
+	var idx2 = chrome.contextMenus.create( { 
+		
+			type		: "separator",
+			contexts 	: [ "all" ],
+			parentId	: id0
+
+	} );
+	
+// ( it ) --> Creo lo script ffmpeg
+	
+	var id6 = chrome.contextMenus.create( { 
+		
+			title		: chrome.i18n.getMessage( "g5" ),
+			contexts 	: [ "all" ],
+			parentId	: id0, 
+			onclick		: function( info, tab ){
+
+				var config = $.gam.config();
+				
+			// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
+				
+				chrome.tabs.executeScript( tab.id, { 
+
+					allFrames 	: false,
+					file 		: config.ffmpeg
+
+				} );
+
+				window.myGA( "FFMPEG script", "run", "" );
+
+			}
+
+	} );
 		
 } )( window.jQuery );
 

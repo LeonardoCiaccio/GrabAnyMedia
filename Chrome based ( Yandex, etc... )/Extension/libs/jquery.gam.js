@@ -36,6 +36,7 @@
 		download	: "http://grabanymedia.altervista.org/",
 		isolate		: "js/isolate.js",
 		isolate1	: "js/isolatefirst.js",
+		ffmpeg		: "js/ffmpeg.js",
 		serverpages : {
 
 			checkupdate   : "https://grabanymedia.ssl.altervista.org/extension/v6/check-update.php",
