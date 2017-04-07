@@ -198,6 +198,12 @@
     "g2" : {
         "message": "MEV Cinema"
     },
+    "g3" : {
+        "message": "Highlight players"
+    },
+    "g4" : {
+        "message": "Isolate player"
+    },
     "mevtitle" : {
         "message": "Title for this video"
     },
@@ -212,6 +218,12 @@
     },
     "mevconfirm" : {
         "message": "Embed not found, open MEV app ?"
+    },
+    "alc1" : {
+        "message": "Highlighted all possible players with big border, click on border to isolate !"
+    },
+    "alc2" : {
+        "message": "Possible players not found !"
     }
       
 }  

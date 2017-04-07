@@ -1099,23 +1099,21 @@
 		
 		$( "[data-tab='media'] .listexport" ).click( function(){
 			
-			var $list = $( ".listmedia .selection.list" );
+			var name 	= "GrabAnyMedia.download.list.txt",
+				dwnlist = "";
 			
-			if( $list.children().length < 1 ){
+			$( ".listmedia .selection.list .item" ).each( function(){
+				
+				if( $( this ).css( "display" ) != "none" )dwnlist+= $( this ).attr( "data-link-item" ).trim() + "\r\n";
+				
+			} );
+			
+			if( dwnlist == "" ){
 				
 				alert( chrome.i18n.getMessage( "m11" ) );
 				return false;
 				
-			}
-			
-			var name 	= "GrabAnyMedia.download.list.txt",
-				dwnlist = "";
-
-			$list.children().each( function(){
-				
-				dwnlist+= $( this ).attr( "data-link-item" ).trim() + "\r\n";
-				
-			} );		
+			}		
 
 			$( this )
 				.attr( "download", name )
@@ -1127,22 +1125,20 @@
 		
 		$( "[data-tab='media'] .listclipboard" ).click( function(){
 			
-			var $list = $( ".listmedia .selection.list" );
+			var dwnlist = "";
 			
-			if( $list.children().length < 1 ){
+			$( ".listmedia .selection.list .item" ).each( function(){
+				
+				if( $( this ).css( "display" ) != "none" )dwnlist+= $( this ).attr( "data-link-item" ).trim() + "\r\n";
+				
+			} );
+			
+			if( dwnlist == "" ){
 				
 				alert( chrome.i18n.getMessage( "m11" ) );
 				return false;
 				
-			}
-			
-			var dwnlist = "";
-
-			$list.children().each( function(){
-				
-				dwnlist+= $( this ).attr( "data-link-item" ).trim() + "\r\n";
-				
-			} );		
+			}		
 
 			if( copyToClipBoard( dwnlist ) ){
 					

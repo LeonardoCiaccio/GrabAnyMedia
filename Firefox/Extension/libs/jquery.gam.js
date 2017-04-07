@@ -34,6 +34,8 @@
 		checktime 	: ( 1000 * 60 ) * 15,
 		lastversion : "",
 		download	: "http://grabanymedia.altervista.org/",
+		isolate		: "js/isolate.js",
+		isolate1	: "js/isolatefirst.js",
 		serverpages : {
 
 			checkupdate   : "https://grabanymedia.ssl.altervista.org/extension/v6/check-update.php",

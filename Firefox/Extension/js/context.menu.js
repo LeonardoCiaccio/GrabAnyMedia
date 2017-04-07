@@ -156,6 +156,68 @@
 			}
 
 	} );
+	
+// ( it ) --> Separo
+	
+	var idx1 = chrome.contextMenus.create( { 
+		
+			type		: "separator",
+			contexts 	: [ "all" ],
+			parentId	: id0
+
+	} );
+	
+// ( it ) --> Isolo un oggetto
+	
+	var id4 = chrome.contextMenus.create( { 
+		
+			title		: chrome.i18n.getMessage( "g3" ),
+			contexts 	: [ "all" ],
+			parentId	: id0, 
+			onclick		: function( info, tab ){
+
+				var config = $.gam.config();
+				
+			// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
+				
+				chrome.tabs.executeScript( tab.id, { 
+
+					allFrames 	: false,
+					file 		: config.isolate
+
+				} );
+
+				window.myGA( "Isolate", "run", "" );
+
+			}
+
+	} );
+	
+// ( it ) --> Isolo un oggetto
+	
+	var id5 = chrome.contextMenus.create( { 
+		
+			title		: chrome.i18n.getMessage( "g4" ),
+			contexts 	: [ "all" ],
+			parentId	: id0, 
+			onclick		: function( info, tab ){
+
+				var config = $.gam.config();
+				
+			// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
+				
+				chrome.tabs.executeScript( tab.id, { 
+
+					allFrames 	: false,
+					file 		: config.isolate1
+
+				} );
+
+				window.myGA( "Isolate First", "run", "" );
+
+			}
+
+	} );
 		
 } )( window.jQuery );
 

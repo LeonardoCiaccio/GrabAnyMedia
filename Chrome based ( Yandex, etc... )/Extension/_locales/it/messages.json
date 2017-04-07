@@ -198,6 +198,12 @@
     "g2" : {
         "message": "MEV Cinema"
     },
+    "g3" : {
+        "message": "Evidenzia i players"
+    },
+    "g4" : {
+        "message": "Isola il player"
+    },
     "mevtitle" : {
         "message": "Titolo per questo video"
     },
@@ -212,6 +218,12 @@
     },
     "mevconfirm" : {
         "message": "Non ho trovato nulla qui vuoi aprire MEV app ?"
+    },
+    "alc1" : {
+        "message": "Evidenziati tutti i possibili players, click sul bordo per isolarlo !"
+    },
+    "alc2" : {
+        "message": "Non sono stati trovati possibili players !"
     }
       
 }  
