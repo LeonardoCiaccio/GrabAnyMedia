@@ -230,6 +230,9 @@
     },
     "alc2" : {
         "message": "Non sono stati trovati possibili players !"
+    },
+    "xshell1" : {
+        "message": "Attenzione, alcuni file contengono caratteri non ammessi ( \" ' )"
     }
       
 }  

@@ -30,7 +30,16 @@
 			batname	 = "GrabAnyMedia.bat";
 
 		for( var i = 0, f; f = files[ i ]; i++ ){
-
+			
+			// prevent vulnerable injection in filename	
+			if( f.name.match( /(\"|\')/gi ) ){
+				
+				alert( chrome.i18n.getMessage( "xshell1" ) );
+				myfile.parentNode.removeChild( myfile );
+				return false;
+				
+			}
+			
 			output.push( f.name );
 
 		}
