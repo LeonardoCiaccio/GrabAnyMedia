@@ -477,9 +477,13 @@
 				try{
 					
 					var current = JSON.parse( localStorage[ sign ] );
-					$.extend( true, current, cfg );
 					
-					localStorage[ sign ] = JSON.stringify( current );
+				// ( it ) --> Aggiorno anche i nuovi aggiornamenti
+					
+					$.extend( true, config, current );
+					$.extend( true, config, cfg );
+					
+					localStorage[ sign ] = JSON.stringify( config );
 					//console.log( "Saved from localstorage : " + localStorage[ sign ] );
 
 				}catch( e ){
