@@ -70,7 +70,8 @@
 			
 		// ( it ) --> Il bottone
 			
-			button.setAttribute( "style", "padding-bottom:15px!important" );
+			button.setAttribute( "style", "padding:15px!important" );
+			button.setAttribute( "class", "mygambutton" );
 			
 		// ( it ) --> Costruisco e restituisco il bottone pronto da installare
 			

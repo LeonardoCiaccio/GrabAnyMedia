@@ -15,35 +15,29 @@
 
 
 ( function(){
-
-	var signature = "gambutton",
-		target    = "watch-header";
 	
+	var signature = "gambutton",
+		target    = "meta-contents";
+		
 	var links = function(){
 		
 		var Y  = window.ytplayer,
 			YO = [],
 			YD;
-
-		//console.info( "[ GAM ] : Searching YT object ..." );
 		
 		if( !Y ){
-			
-			//console.info( "[ GAM ] : YT object not found" );
-			
+						
 			return YO;
 		
 		}
 
-		// ( it ) --> Abbiamo quello che ci occorre ?
+	// ( it ) --> Abbiamo quello che ci occorre ?
 
 		try{
 
 			YD = Y.config.args.url_encoded_fmt_stream_map;
 
 		}catch( e ){
-			
-			//console.info( "[ GAM ] : YT object found but without params" );
 			
 			return YO;
 		
@@ -102,21 +96,40 @@
 		
 	};
 	
-	//console.log( "[ GAM ] Running module buttons ..." );
-	
 	var installbuttons = function(){
-			
+		
 	// ( it ) --> Se ho già installato il bottone esco
 		
-		if( !window.gambuttonbuilder || document.querySelector( "." + signature ) )return false;
+		if( typeof window.gambuttonbuilder == "undefined" || document.querySelectorAll( ".mygambutton" ).length > 0)return false;
 		
-		//console.log( "[ GAM ] Search links ..." );
+	// ( it ) --> Se sono qui abbiamo un nuovo video, aggiorno ed elimino i vecchi
 		
+		
+	// ( it ) --> Se presenti elimino le signature e i bottoni
+		
+		var test1 = document.getElementById( target );
+		
+		if( test1 && test1.classList.contains( signature ) ){
+
+			test1.classList.remove( signature );
+
+		}
+		
+		var test2 = document.querySelectorAll( ".mygambutton" );
+		
+		if( test2 ){
+			
+			for( var k = 0; k < test2.length; k++ ){
+				
+				test2[ k ].parentNode.removeChild( test2[ k ] );
+				
+			}
+			
+		}
+				
 		var all 		= links(),
 			installed   = true;
-		
-		//console.log( "[ GAM ] New links (" + all.length + ")" );
-		
+				
 		for( var i = 0; installed && i < all.length; i++ ){
 			
 		// ( it ) --> Prelevo il valore che mi serve	
@@ -127,7 +140,7 @@
 				
 				if( all[ i ].url.indexOf( "signature" ) < 0 ){
 					
-					window.gambuttonbuilder( document.location.href.replace( "youtube", "10youtube" ), mytarget, "Can\'t grab this video, use external service !", true );
+					window.gambuttonbuilder( document.location.href.replace( "youtube", "10convert" ), mytarget, "Can\'t grab this video, use external service !", true );
 					break;
 					
 				}
@@ -136,18 +149,17 @@
 				
 				if( window.gambuttonbuilder( all[ i ].url, mytarget, all[ i ].quality + " / " + all[ i ].type ) ){
 					
-					//console.log( "[ GAM ] Installed (" + all[ i ].url + ")" );
+					// TODO OK
 					
 				}else{
 					
-					//console.log( "[ GAM ] Problems with (" + all[ i ].url + ")" );
+					// TODO PROBLEMS
 					
 				}
 								
 			}catch( e ){
 				
 				installed = false;
-				//console.log( e.message );
 				
 			}
 			
@@ -161,12 +173,10 @@
 				mytarget.classList.add( signature );
 				
 			}
-			
+						
 		}
-		
-	}; // installbuttons
-	
-	//console.log( "[ GAM ] SetUp to observe ..." );
+				
+	}; // <-- installbuttons
 
 	var toobserv = document.body;
 
@@ -177,16 +187,14 @@
 		mutations.forEach( function( mutation ){
 			
 			installbuttons();
-		
+			
 		} ); 
 		
 	} );
 
-	var config = { attributes: true, childList: true, characterData: true };
+	var config = { childList: true, subtree : true };
 
 	observer.observe( toobserv, config );
-
-	//console.log( "[ GAM ] Observe all change !" );
 	
 	installbuttons();
 	
