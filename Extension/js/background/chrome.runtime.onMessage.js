@@ -119,4 +119,4 @@
 
 	} );
 	
-} )( window.GA || function(){}, window.jQuery );
+} )( window.myGA || function(){}, window.jQuery );
