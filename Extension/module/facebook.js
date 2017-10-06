@@ -281,6 +281,38 @@
             callback = callback || function(){};
             
             if( _getDomain( link ) != "facebook" )return [];
+
+        // ( IT ) --> Tento un recupero
+            
+            var player = document.querySelector( "video[src='" + srcvideo + "']" );
+            
+            if( !!player ){
+                
+                var closest = player.closest( "[id^='hyperfeed_story_id']" );
+                
+                if( !!closest ){
+                    
+                    var 
+                         allLink = closest.querySelectorAll( "a" )
+                    
+                        ,href = ""
+                    ;
+                    
+                    allLink.forEach( function( a, i ){
+                        
+                        if( !!href )return false;
+                        
+                        var aHREF = a.href;
+                        
+                        if( /(?:\/videos\/\d+\/)|(?:\/video\.php\?v=\d+)/i.test( aHREF ) )href = aHREF; 
+                        
+                    } );
+                    
+                    if( !!href )link = href;
+                    
+                }
+                
+            }
             
             if( !link.match( /^(https\:\/\/|http\:\/\/|\/\/).*facebook\..*\/.*\/videos\/:?/gi )/* &&
               
