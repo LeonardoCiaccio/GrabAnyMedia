@@ -2,7 +2,7 @@
 	
 	"manifest_version" 			: 2,
 	"author"					: "Leonardo Ciaccio",
-	"version" 					: "6.1.7.2",
+	"version" 					: "6.1.7.3",
 	"name" 						: "Grab Any Media",
 	"default_locale" 			: "en",
 	"description" 				: "__MSG_des__",
@@ -39,7 +39,7 @@
                 "<all_urls>"
             ],
             "js": [
-                "js/assistant.min.js"
+                "js/assistant.js"
             ],
             "css": [
                 "css/assistant.css"
@@ -53,7 +53,7 @@
                 "*://*.youtube.com/embed*"
             ],
             "js": [
-                "module/youtube.min.js"
+                "module/youtube.js"
             ],
             "run_at": "document_start",
             "all_frames": true
@@ -63,7 +63,7 @@
                 "*://*.vimeo.com/*"
             ],
             "js": [
-                "module/vimeo.min.js"
+                "module/vimeo.js"
             ],
             "run_at": "document_start",
             "all_frames": true
@@ -73,7 +73,7 @@
                 "*://*.facebook.com/*"
             ],
             "js": [
-                "module/facebook.min.js"
+                "module/facebook.js"
             ],
             "run_at": "document_start",
             "all_frames": true
@@ -84,7 +84,7 @@
                 "*://*.dailymotion.com/embed/video/*"
             ],
             "js": [
-                "module/dailymotion.min.js"
+                "module/dailymotion.js"
             ],
             "run_at": "document_start",
             "all_frames": true
