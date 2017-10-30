@@ -15,9 +15,7 @@
     "use strict";
    
     var
-         externalAPI = "https://www.10convert.com/watch?v={%c}&utm_source=GrabAnyMedia&utm_medium=extension"
-    
-        ,_toDownload = function( newpage, link, title ){
+         _toDownload = function( newpage, link, title ){
             
             if( newpage ){
                             
@@ -313,10 +311,10 @@
                 }
                 
             }
-            
-            if( !link.match( /^(https\:\/\/|http\:\/\/|\/\/).*facebook\..*\/.*\/videos\/:?/gi )/* &&
+            			
+            if( !link.match( /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?facebook\..*\/.*\/videos\/:?/gi )/* &&
               
-                !link.match( /^(https\:\/\/|http\:\/\/|\/\/).*facebook\..*\/plugins\/video.php:?/gi )
+                !link.match( /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?facebook\..*\/plugins\/video.php:?/gi )
               */){
                 
                 alert( chrome.i18n.getMessage( "fb_to_video" ) );
@@ -327,7 +325,7 @@
             
             _findLinks( link, function( response ){
                 
-                if( !response || response.length < 1 )return callback(); //return callback( externalAPI.replace( /\{\%c\}/gi, videocode ) );
+                if( !response || response.length < 1 )return callback();
                 
                 return callback( response );
                 

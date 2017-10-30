@@ -15,9 +15,7 @@
     "use strict";
    
     var
-         externalAPI = "https://www.10convert.com/watch?v={%c}&utm_source=GrabAnyMedia&utm_medium=extension"
-    
-        ,api = "https://player.vimeo.com/video/{%c}/config"
+         api = "https://player.vimeo.com/video/{%c}/config"
         
         ,_noCache = function( link ){
 			
@@ -140,9 +138,9 @@
         ,_getVideoCode = function( link ){
             
             var 
-                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/).*vimeo\..*\/:?/gi
+                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?vimeo\..*\/:?/gi
             
-                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/).*vimeo\..*\/video\/:?/gi
+                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?vimeo\..*\/video\/:?/gi
             
                 ,tmp
             ;
@@ -233,7 +231,7 @@
             
             _findLinks( videocode, function( response ){
                 
-                if( !response || response.length < 1 )return callback(); //return callback( externalAPI.replace( /\{\%c\}/gi, videocode ) );
+                if( !response || response.length < 1 )return callback();
                 
                 return callback( response );
                 

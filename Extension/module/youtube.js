@@ -161,9 +161,9 @@
         ,_getVideoCode = function( link ){
             
             var
-                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/).*youtube\..*\/watch\?:?/gi
+                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?youtube\..*\/watch\?:?/gi
             
-                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/).*youtube\..*\/embed\/:?/gi
+                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?youtube\..*\/embed\/:?/gi
             ;
             
             if( link.match( reCanonical ) ){

@@ -15,9 +15,7 @@
     "use strict";
    
     var
-         externalAPI = "https://www.10convert.com/watch?v={%c}&utm_source=GrabAnyMedia&utm_medium=extension"
-    
-        ,api = "http://www.dailymotion.com/player/metadata/video/{%c}"
+         api = "http://www.dailymotion.com/player/metadata/video/{%c}"
         
         ,_noCache = function( link ){
 			
@@ -140,9 +138,9 @@
         ,_getVideoCode = function( link ){
             
             var 
-                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/).*dailymotion\..*\/video\/:?/gi
+                 reCanonical = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?dailymotion\..*\/video\/:?/gi
             
-                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/).*dailymotion\..*\/embed\/video\/:?/gi
+                ,reEmbed     = /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?dailymotion\..*\/embed\/video\/:?/gi
             
                 ,tmp
             ;
@@ -249,7 +247,7 @@
             
             _findLinks( videocode, function( response ){
                 
-                if( !response || response.length < 1 )return callback(); //return callback( externalAPI.replace( /\{\%c\}/gi, videocode ) );
+                if( !response || response.length < 1 )return callback();
                 
                 return callback( response );
                 

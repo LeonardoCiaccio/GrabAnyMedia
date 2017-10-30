@@ -2,7 +2,7 @@
 	
 	"manifest_version" 			: 2,
 	"author"					: "Leonardo Ciaccio",
-	"version" 					: "6.1.7.3",
+	"version" 					: "6.1.7.6",
 	"name" 						: "Grab Any Media",
 	"default_locale" 			: "en",
 	"description" 				: "__MSG_des__",
