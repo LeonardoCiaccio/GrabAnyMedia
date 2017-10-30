@@ -33,17 +33,17 @@
 		debug 		: false,
 		checktime 	: ( 1000 * 60 ) * 15,
 		lastversion : "",
-		download	: "http://grabanymedia.altervista.org/",
+		download	: "https://grabanymedia.altervista.org/",
 		isolate		: "js/isolate.js",
 		isolate1	: "js/isolatefirst.js",
 		ffmpeg		: "js/ffmpeg.js",
 		serverpages : {
 
-			checkupdate   : "https://grabanymedia.ssl.altervista.org/extension/v6/check-update.php",
-			opendb		  : "https://grabanymedia.ssl.altervista.org/extension/opendb/",
-			search 		  : "http://grabanymedia.altervista.org/extension/opendb/search.php",
-			comments 	  : "https://grabanymedia.ssl.altervista.org/extension/comments.php",
-			monetize	  : ""//https://grabanymedia.ssl.altervista.org/extension/ads/"
+			checkupdate   : "https://grabanymedia.altervista.org/extension/v6/check-update.php",
+			opendb		  : "https://grabanymedia.altervista.org/extension/opendb/",
+			search 		  : "https://grabanymedia.altervista.org/extension/opendb/search.php",
+			comments 	  : "https://grabanymedia.altervista.org/extension/comments.php",
+			monetize	  : ""//https://grabanymedia.altervista.org/extension/ads/"
 
 		},
 		pages		: {

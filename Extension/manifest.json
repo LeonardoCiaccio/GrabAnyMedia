@@ -2,11 +2,11 @@
 	
 	"manifest_version" 			: 2,
 	"author"					: "Leonardo Ciaccio",
-	"version" 					: "6.1.7.6",
+	"version" 					: "6.1.7.7",
 	"name" 						: "Grab Any Media",
 	"default_locale" 			: "en",
 	"description" 				: "__MSG_des__",
-	"homepage_url" 				: "http://grabanymedia.altervista.org/",
+	"homepage_url" 				: "https://grabanymedia.altervista.org/",
 	"options_page"				: "console.html",
     "browser_action": {
         "default_icon": "img/icon.24.png",

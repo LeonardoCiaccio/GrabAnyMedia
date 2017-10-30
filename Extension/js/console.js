@@ -29,7 +29,7 @@
 		var docs 	= [],
 			pingout = 2000,
 			runing 	= -1,
-			banner	= "https://grabanymedia.ssl.altervista.org/extension/ads/gateway.php?g=banner";
+			banner	= "https://grabanymedia.altervista.org/extension/ads/gateway.php?g=banner";
 		
 		var escapeHTML = function( str ){
 			
@@ -919,7 +919,7 @@
 		
 		$( ".image.logo" ).click( function(){
 			
-			window.open( "http://grabanymedia.altervista.org/" );
+			window.open( "https://grabanymedia.altervista.org/" );
 			
 		} );
 		
