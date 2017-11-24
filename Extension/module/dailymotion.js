@@ -15,7 +15,7 @@
     "use strict";
    
     var
-         api = "http://www.dailymotion.com/player/metadata/video/{%c}"
+         api = "https://www.dailymotion.com/player/metadata/video/{%c}"
         
         ,_noCache = function( link ){
 			
