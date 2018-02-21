@@ -81,13 +81,6 @@
 
             ,openConsole : function( request, sender, sendResponse ){
                 
-                chrome.tabs.executeScript( sender.tab.id, { 
-
-                    allFrames 	: false,
-                    file 		: "js/no.inspector.js"
-
-                } );
-
             // ( it ) --> Vediamo se ci sono moduli
 
                 var config = $.gam.config();	
