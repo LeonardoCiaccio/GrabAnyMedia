@@ -265,7 +265,7 @@
     window.GAMMODULE = {
         
         getLinks : function( link, callback, srcvideo, newpage ){
-            
+    
             if( srcvideo && srcvideo.indexOf( "http" ) == 0 ){
                 
                 _toDownload( newpage, srcvideo );
@@ -277,7 +277,7 @@
             link = link || document.location.href;
             
             callback = callback || function(){};
-            
+           
             if( _getDomain( link ) != "facebook" )return [];
 
         // ( IT ) --> Tento un recupero
@@ -316,7 +316,7 @@
               
                 !link.match( /^(https\:\/\/|http\:\/\/|\/\/)(?:www\.)?facebook\..*\/plugins\/video.php:?/gi )
               */){
-                
+               
                 alert( chrome.i18n.getMessage( "fb_to_video" ) );
             
                 return callback();
@@ -334,5 +334,5 @@
         } // <-- getLinks
         
     };
-    
+   
 } )();

@@ -40,16 +40,7 @@
 			contexts 	: [ "all" ],
 			parentId	: id0, 
 			onclick		: function( info, tab ){
-				
-			// ( it ) --> Se non trovo l'inspector devo ricaricare la pagina
-				
-				chrome.tabs.executeScript( tab.id, { 
-
-					allFrames 	: false,
-					file 		: "js/no.inspector.js"
-
-				} );
-				
+								
 			// ( it ) --> Vediamo se ci sono moduli
 		
 				var config = $.gam.config();

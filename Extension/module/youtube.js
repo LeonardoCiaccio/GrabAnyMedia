@@ -15,7 +15,7 @@
     "use strict";
    
     var
-         externalAPI = "https://www.10convert.com/watch?v={%c}&utm_source=GrabAnyMedia&utm_medium=extension"
+         externalAPI = "https://www.10-youtube.com/watch?v={%c}&utm_source=GrabAnyMedia&utm_medium=extension"
     
         ,canonical = "https://www.youtube.com/watch?v={%c}"
         

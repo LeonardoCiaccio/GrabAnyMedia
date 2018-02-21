@@ -61,12 +61,12 @@
             
             eles = eles || document.querySelectorAll( "[" + signature + "='toremove']" ) ;
                         
-            if( !NodeList.prototype.isPrototypeOf( eles ) ){
-                
+            if( !( eles.length > 1 ) ){
+               
                 __worker( eles );
                 
             }else{
-                
+               
                 eles.forEach( function( ele, index ){
                     
                     __worker( ele );
@@ -119,8 +119,12 @@
         }
     
         ,_show = function( eles ){
-                    
+            
+            if( !eles )return false;
+
             var __worker = function( ele ){
+            
+                if( !ele.getAttribute )return false;
                 
                 var mystyle = ele.getAttribute( "style" ) || "";
 
@@ -148,9 +152,14 @@
         } 
 
         ,_hide = function( eles ){
+            
+            if( !eles )return false;
 
             var __worker = function( ele ){
-                
+ 
+            
+                if( !ele.getAttribute )return false;
+
                 var mystyle = ele.getAttribute( "style" ) || "";
 
                 mystyle = mystyle.replace( hideFlag, "" ).replace( showFlag, "" );
@@ -178,7 +187,11 @@
 
         ,_toggle = function( eles ){
             
+            if( !eles )return false;
+            
             var __worker = function( ele ){
+            
+                if( !ele.getAttribute )return false;
                 
                 var mystyle = ele.getAttribute( "style" ) || "";
 
@@ -340,7 +353,7 @@
             
             var 
                  _toNormal = function(){
-                    
+                     
                     icon.setAttribute( "src", iconPath );
                      
                     var 
@@ -350,7 +363,7 @@
                     ;
                 
                      _remove();
-                    
+                     
                     allNormal.forEach( function( ele, index ){
                         
                         _show( ele );
@@ -746,31 +759,46 @@
         }
     
         ,_allToNormal = function(){
-                
+               
             var 
                  allNormal = document.querySelectorAll( "[" + signature + "='normal']" ) || []
 
-                ,allLoading = document.querySelectorAll( "[" + signature + "='loading']" ) || []
+                ,allLoading = document.querySelectorAll( "[" + signature + "='loading']" ) || [] 
 
                 ,allAssistant = document.querySelectorAll( "img[" + signature + "='assistant']" ) || []
 
                 ,allMenu = document.querySelectorAll( "[" + signature + "='menu']" ) || []
             ;
 
+
+
             _remove();
             
-            _show( allNormal );
-
-            _hide( allLoading );
-
-            _hide( allMenu );
-
-            allAssistant.forEach( function( ele, index ){
-
-                ele.setAttribute( "src", iconPath );
+            allNormal.forEach( function( ele, index ){
+  
+                _show( ele );
 
             } );
 
+            
+            allLoading.forEach( function( ele, index ){
+  
+                _hide( ele );
+
+            } );
+
+            allMenu.forEach( function( ele, index ){
+  
+                _hide( ele );
+
+            } );
+
+            allAssistant.forEach( function( ele, index ){
+ 
+                ele.setAttribute( "src", iconPath );
+
+            } );
+  
         }
     
         ,_removeAll = function(){
@@ -856,12 +884,12 @@
 			
 			cmd[ request.cmd ]( request, sender, sendResponse );
 
-		}catch( e ){}
+		}catch( e ){/*console.log(e.message)*/}
 		
 	} );
     
     _start();
-    
+ 
 } )();
 
 
