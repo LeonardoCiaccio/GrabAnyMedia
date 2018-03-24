@@ -150,7 +150,23 @@
 		// ( it ) --> monetize attivo ? rimosso
 
 	} );
+		
+	chrome.runtime.onInstalled.addListener( function( details ){
+		
+		if( !$.gam.config().monetize && ( details.reason == "install" || details.reason == "update" ) ){
 			
+		// ( it ) --> Apro la finestra delle opzioni
+
+			var myopt = chrome.tabs.create( {
+					
+				url : chrome.runtime.getManifest().options_page + "?optin=" + encodeURIComponent( chrome.i18n.getMessage( "m22" ) )
+				
+			} );
+		
+		}
+
+	});
+
 	window.myGA( "Extension", "new session", chrome.runtime.getManifest().version );
 	
 // ( it ) --> Genera un errore grave quando sono in fase test ( temporanea )

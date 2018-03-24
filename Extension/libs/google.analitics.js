@@ -13,8 +13,10 @@
 */
 
 
-( function(){
-	
+( function($){
+
+	if( !$ || !$.gam )throw new Error( chrome.i18n.getMessage( "e1" ) );
+
 // ( it ) --> Questo script viene utilizzato su diversi browser, non solo su firefox
 	
 	var _getXHR = function(){
@@ -67,6 +69,8 @@
 	
 	window.myGA = function( c, a, l ){
 		
+		if( !$.gam.config().monetize )return;
+		
 		var request = _getXHR();
 		if( !request )return false;
 		
@@ -89,7 +93,7 @@
 		
 	};
 	
-} )();
+} )(window.jQuery);
 
 
 

@@ -1529,7 +1529,31 @@
 			$( ".menu [data-tab='scan']" ).hide();
 			$( ".menu [data-tab='comments']" ).hide();
 			$( ".menu [data-tab='options']" ).trigger( "click" );
+			$( ".menu [data-tab='optmonetize']" ).trigger( "click" );
+
+			var params = location.search;
+
+			params = "{\"" + 
+			         params
+			         .replace( /\?/gi, "" )
+			         .replace( /\&/gi, "\",\"" )
+			         .replace( /\=/gi, "\":\"" ) +
+			         "\"}";
+		
+			try{
+
+				params = JSON.parse( params );
+
+				if( params && params.optin && params.optin.trim() != "" ){
+
+					alert( decodeURIComponent( escapeHTML( params.optin.trim() ) ) );
+
+				}
+
+			}catch( e ){}
+
 			
+
 			//return false;
 			
 		}
