@@ -109,7 +109,11 @@
 		"tabs", 
 		"<all_urls>"
 		
-	]
-	
+	],
+	"applications": {
+		"gecko": {
+			"id": "grabanymedia@altervista.org"
+		}
+	}
 }
 
