@@ -1,4 +1,2 @@
-# GrabAnyMedia
-Browser extension for video / audio / streaming downloads
-
-ONLY DEVELOPER MODE FOR ALL BROWSER, UNDER MIT LICENSE CONTACT LEONARDO.CIACCIO@GMAIL.COM BEFORE DISTRIBUTE YOUR COPY.
+**Home :** *[https://grabanymedia.com/](https://grabanymedia.com/)*  
+**Become a contributor :** Fork --» Edit --» Push or  *[Contact me on Telegram](https://t.me/LeonardoCiaccio)*
