@@ -2,7 +2,7 @@
 
     "use strict";
 
-    const version = "1.000";
+    const version = "1.001";
 
     console.log(`GAM ${version}`);
 
