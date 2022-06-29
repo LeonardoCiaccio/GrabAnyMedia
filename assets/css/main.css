@@ -1,0 +1,45 @@
+/* Firefox */
+
+* {
+    scrollbar-color: rgb(197, 197, 197) white!important;
+    scrollbar-width: thin!important;
+}
+
+a:not(.button, .item) {
+    color: #9e9e9e!important;
+}
+
+a:hover:not(.button, .item) {
+    color: black!important;
+    text-decoration: none!important;
+}
+
+
+/* WebKit and Chromiums */
+
+ ::-webkit-scrollbar {
+    width: 8px!important;
+    height: 8px!important;
+    background-color: white!important;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(197, 197, 197)!important;
+    border-radius: 0px!important;
+}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 539px) {}
+
+@media (max-width: 402px) {}
+
+.ui.all.browser {
+    margin-top: 3rem!important;
+}
+
+.ui.all.browser p.info {
+    margin-top: 1rem!important;
+}
