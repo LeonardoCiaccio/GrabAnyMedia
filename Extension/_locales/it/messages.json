@@ -4,49 +4,49 @@
         "message": "Cattura quasi tutti i media presenti online, video, audio e streaming"
     },
 	"d" : {
-        "message": "Ciao, mi chiamo Leonardo Ciaccio, ho sviluppato e mantengo in vita questo progetto perché ritengo che sia molto utile. Una estensione che utilizzo tutti i giorni perché come voi ho la passione per i video e per le canzoni, 'Grab Any Media' cresce nel tempo anche grazie il vostro aiuto, i vostri consigli. Questa estensione è open-source pertanto chiunque può verificare il codice alla ricerca di imperfezioni. Se volete aiutare questo progetto dovete solo condividerlo e renderlo popolare, siamo oltre 500.000 ad utilizzarlo. Grazie !"
+        "message": "Ciao, mi chiamo Leonardo Ciaccio, ho sviluppato e mantengo in vita questo progetto perché ritengo che sia molto utile. È una estensione che uso tutti i giorni perché come voi ho la passione per i video e per le canzoni. 'Grab Any Media' cresce nel tempo anche grazie il vostro aiuto, i vostri consigli. Questa estensione è open-source pertanto chiunque può verificare il codice alla ricerca di imperfezioni. Se vuoi aiutare questo progetto devi solo condividerlo e renderlo popolare, siamo oltre 500.000 ad usarlo. Grazie !"
     },
 	"d1" : {
-        "message": "Questa versione di 'Grab Any Media' è obsoleta, scarica l'ultima versione aggiornata, ti ci porto io ?"
+        "message": "Questa versione di 'Grab Any Media' non è aggiornata, scarica la versione aggiornata del programma. Vuoi aprire la pagina web per il download?"
     },
 	"slogan" : {
-        "message": "posso catturare tutti i media su internet, in caso contrario usa lo scanner per trovare i link"
+        "message": "È possibile catturare la maggior parte dei media su internet, in caso contrario usa lo scanner per trovare i collegamenti"
     },
 	"e1" : {
-        "message": "La versione corrente di 'Grab Any Media' richiede jQuery !"
+        "message": "La versione attuale di 'Grab Any Media' richiede jQuery !"
     },
 	"e2" : {
-        "message": "La versione corrente di '%s' richiede jQuery.gam !"
+        "message": "La versione attuale di '%s' richiede jQuery.gam !"
     },
 	"e3" : {
-        "message": "Il context menu richiede '$.gam' !"
+        "message": "Il menu contestuale richiede '$.gam' !"
     },
 	"e4" : {
-        "message": "Ricarica la pagina, non trovo l'inspector !"
+        "message": "Ricarica la pagina, impossibile trovare l'inspector !"
     },
 	"e5" : {
-        "message": "😜 sei nel posto sbagliato, ti sei perso ?"
+        "message": "😜 sei nel posto sbagliato. Ti sei perso?"
     },
 	"m" : {
         "message": "Grab Any Media"
     },
 	"m1" : {
-        "message": "attendere prego, recupero i files ..."
+        "message": "Recupero dei file. Attendi..."
     },
 	"m2" : {
         "message": "Copiato"
     },
 	"m3" : {
-        "message": "Per utilizzare Grab Any Media devi ricaricare questa pagina, ci penso io ?"
+        "message": "Per usare Grab Any Media devi ricaricare questa pagina. Vuoi ricaricarla?"
     },
 	"m4" : {
         "message": "Non ho trovato nulla"
     },
 	"m5" : {
-        "message": "prova con lo scanner potresti trovare qualcosa, oppure controlla la dimensione minima nelle 'Opzioni' potrebbe essere troppo alta prova ad abbassare il valore per catturare files di dimensioni più piccole"
+        "message": "Prova con lo scanner potresti trovare qualcosa, oppure controlla la dimensione minima nelle 'Opzioni' potrebbe essere troppo alta. Prova ad abbassare il valore per catturare file di dimensioni più piccole"
     },
 	"m6" : {
-        "message": "Troppi risultati ? filtrali !"
+        "message": "Troppi risultati? Filtrali!"
     },
 	"m7" : {
         "message": "Tipo di file"
@@ -55,52 +55,52 @@
         "message": "Dimensioni"
     },
 	"m9" : {
-        "message": "Testo nel link"
+        "message": "Testo nel collegamento"
     },
 	"m10" : {
-        "message": "Filtrati / Totale"
+        "message": "Filtrati/totale"
     },
 	"m11" : {
-        "message": "Ehmmm, non vedi che la lista è vuota ?"
+        "message": "Fai attenzione che l'elenco è vuoto"
     },
 	"m12" : {
-        "message": "Prima seleziona il video cliccando su 'Anteprima' e poi esegui questa operazione"
+        "message": "Prima seleziona il video selezionando 'Anteprima' e poi esegui questa operazione"
     },
 	"m13" : {
-        "message": "Qui puoi definire la dimensione minima dei media, quando si apre e/o aggiorna una pagina Grab Any Media registra tutti i media che interessano, per evitare di registrare tanta spazzatura come frammenti pubblicitari e altro puoi impostare una dimensione minima pertanto verranno registrati solo i media superiori a quel valore risparmiando risorse preziose. Puoi utilizzare valori come ad esempio '1.2 MB' oppure '500 KB' per definire il numero di bytes."
+        "message": "Qui puoi definire la dimensione minima dei media, quando si apre e/o aggiorna una pagina Grab Any Media registra tutti i media che interessano, per evitare di registrare tanta spazzatura come frammenti pubblicitari e altro puoi impostare una dimensione minima pertanto verranno registrati solo i media superiori a quel valore risparmiando risorse preziose. Puoi usare valori come ad esempio '1.2 MB' oppure '500 KB' per definire il numero di byte."
     },
 	"m14" : {
         "message": "Dimensioni minime"
     },
 	"m15" : {
-        "message": "Salvato, aggiorna tutte le tabs aperte per le modifiche !"
+        "message": "Salvato, aggiorna tutte le schede aperte per le modifiche!"
     },
 	"m16" : {
-        "message": "Si definiscono quanti records ( media e documenti ) devono essere registrati per ogni singola sessione. Per risparmiare spazio e risorse si rende necessario limitare questo valore, se ad esempio vorremmo impostare un valore di '1000' al raggiungimento di tale valore verrebbero sovrascritti i valori più vecchi garantendo sempre un riciclo di '1000' records. Se hai intenzione di registrare molti frammenti non devi aumentare questo valore ti basterà lasciare aperta la console e magari ridurla a icona."
+        "message": "Si definiscono quanti record ( media e documenti ) devono essere registrati per ogni singola sessione. Per risparmiare spazio e risorse si rende necessario limitare questo valore, se ad esempio si imposta un valore di '1000' al raggiungimento di tale valore verrebbero sovrascritti i valori più vecchi garantendo sempre un riciclo di '1000' record. Se hai intenzione di registrare molti frammenti non devi aumentare questo valore ti basterà lasciare aperta la console e magari ridurla a icona."
     },
 	"m17" : {
-        "message": "Records"
+        "message": "Record"
     },
 	"m18" : {
         "message": "minimo"
     },
 	"m19" : {
-        "message": "Scarica questo video !"
+        "message": "Scarica questo video!"
     },
 	"m20" : {
         "message": "Download"
     },
 	"m21" : {
-        "message": "Puoi commentare tutte le pagine online su qualsiasi sito !"
+        "message": "Puoi commentare tutte le pagine online in qualsiasi sito!"
     },
 	"m22" : {
-        "message": "Aiutaci a migliorare questa estensione abilitando il controllo in debug con google analytics, leggi la nostra privacy policy : https://addons.mozilla.org/it/firefox/addon/grab-any-media/privacy/"
+        "message": "Aiutaci a migliorare questa estensione abilitando il controllo debug con google analytics, leggi la nostra policy privacy qui: https://addons.mozilla.org/it/firefox/addon/grab-any-media/privacy/"
     },
 	"m23" : {
         "message": "❤ Grazie !"
     },
 	"n" : {
-        "message": "Downloads"
+        "message": "Download"
     },
 	"t1" : {
         "message": "Media"
@@ -112,10 +112,10 @@
         "message": "Opzioni"
     },
 	"t4" : {
-        "message": "F.A.Q."
+        "message": "Domande frequenti (FAQ)"
     },
 	"t5" : {
-        "message": "Info"
+        "message": "Info programma"
     },
 	"t6" : {
         "message": "Copia"
@@ -124,10 +124,10 @@
         "message": "Apri"
     },
 	"t8" : {
-        "message": "Scarica"
+        "message": "Download"
     },
 	"t9" : {
-        "message": "Pulisci"
+        "message": "Rimuovi"
     },
 	"t10" : {
         "message": "Ricarica"
@@ -163,7 +163,7 @@
         "message": "Decodifica"
     },
 	"t21" : {
-        "message": "OpenDB raccoglie informazioni anonime inerenti alcuni siti, come ad esempio 'openload', che non indicizzano i propri db, pertanto è molto difficile trovare su internet eventuali films ad essi collegati. Con OpenDB vengono messe a disposizione queste informazioni, il funzionamento è semplice, un utente visita uno di questi host e se ci sono le condizioni invia queste informazioni in forma del tutto anonime a vantaggio di tutta la comunità. Il tuo contributo rende questo strumento più potente, grazie!"
+        "message": "OpenDB raccoglie informazioni anonime inerenti alcuni siti, come ad esempio 'openload', che non indicizzano i propri db, pertanto è molto difficile trovare su internet eventuali film ad essi collegati. Con OpenDB vengono messe a disposizione queste informazioni, il funzionamento è semplice, un utente visita uno di questi host e se ci sono le condizioni invia queste informazioni in forma del tutto anonime a vantaggio di tutta la comunità. Il tuo contributo rende questo strumento più potente, grazie!"
     },
 	"t22" : {
         "message": "Commenti"
@@ -202,13 +202,13 @@
         "message": "MEV Cinema"
     },
     "g3" : {
-        "message": "Evidenzia i players"
+        "message": "Evidenzia i riproduttori"
     },
     "g4" : {
-        "message": "Isola il player"
+        "message": "Isola il riproduttore"
     },
     "g5" : {
-        "message": "FFMPEG script"
+        "message": "Script FFMPEG"
     },
     "mevtitle" : {
         "message": "Titolo per questo video"
@@ -217,19 +217,19 @@
         "message": "Questo browser non supporta MEV"
     },
     "mevmoresource" : {
-        "message": "Ho evidenziato possibili codici da incorporare, clicca sul bordo rosso per aggiungerlo"
+        "message": "Sono stati evidenziati possibili codici incorporati, seleziona il bordo rosso per aggiungerli"
     },
     "mevmorevideo" : {
-        "message": "Ho evidenziato possibili embed da aggiungere, clicca sul bordo rosso per aggiungerlo"
+        "message": "Sono stati evidenziati possibili video incorporati, seleziona il bordo rosso per aggiungerli"
     },
     "mevconfirm" : {
-        "message": "Non ho trovato nulla qui vuoi aprire MEV app ?"
+        "message": "Non è stato trovato nulla. Vuoi aprire l'app MEV?"
     },
     "alc1" : {
-        "message": "Evidenziati tutti i possibili players, click sul bordo per isolarlo !"
+        "message": "Sono stati evidenziati tutti i possibili riproduttori. Seleziona il bordo per isolarlo !"
     },
     "alc2" : {
-        "message": "Non sono stati trovati possibili players !"
+        "message": "Non sono stati trovati possibili riproduttori!"
     },
     "xshell1" : {
         "message": "Attenzione, alcuni file contengono caratteri non ammessi ( \" ' )"
@@ -244,19 +244,19 @@
         "message": "Analizza"
     }
     ,"download" : {
-        "message": "Scarica"
+        "message": "Download"
     }
     ,"loading" : {
-        "message": "Attendere ..."
+        "message": "Attendi..."
     }
     ,"to_analize" : {
-        "message": "Questo video necessita di analisi approfondite, ma prima prova a ricaricare questa pagina potrebbe essere un problema del sito"
+        "message": "Questo video necessita di una analisi approfondita, ma prima prova a ricaricare questa pagina. Potrebbe essere un problema del sito."
     }
     ,"fb_to_video" : {
-        "message": "Apri questo video in una nuova finestra oppure allarga il player, Facebook non mi permette di recuperare il link dallo stream"
+        "message": "Apri questo video in una nuova finestra oppure allarga il riproduttore. Facebook non permette di recuperare il collegamento dallo stream."
     }
     ,"to_play" : {
-        "message": "Avvia il video, dopo qualche secondo prova a scaricare oppure analizzalo"
+        "message": "Prima avvia il video, o analizza il video"
     }
       
 }  
